@@ -192,14 +192,15 @@
             border-radius: 20px;
             padding: 1.5rem;
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-            margin: 0 auto;
+            margin: 0 auto 2rem auto;
             max-width: 1000px;
             position: relative;
             overflow: hidden;
+            text-align: center;
         }
 
         .game-title {
-            text-align: center;
+            text-align: center !important;
             margin-bottom: 1.5rem;
         }
 
@@ -307,7 +308,7 @@
             color: white;
             text-align: center;
             margin-bottom: 1.5rem;
-            font-size: 1.5rem;
+            font-size: 1.8rem;
         }
 
         .features-grid {
@@ -363,7 +364,7 @@
             justify-content: center;
             gap: 0.5rem;
             margin-top: 1rem;
-            flex-wrap: wrap;
+            flex-wrap: nowrap;
         }
 
         .badge {
@@ -389,7 +390,7 @@
         .game-description h3 {
             color: #1976D2;
             margin-bottom: 1rem;
-            font-size: 1.5rem;
+            font-size: 1.8rem;
         }
 
         .game-description p {
@@ -413,7 +414,7 @@
         .controls-section h3 {
             text-align: center;
             margin-bottom: 1.5rem;
-            font-size: 1.5rem;
+            font-size: 1.8rem;
         }
 
         .controls-content {
@@ -443,6 +444,359 @@
         .control-desc {
             font-size: 0.9rem;
             margin: 0;
+        }
+
+        /* About the Game Section */
+        .about-game {
+            background: white;
+            padding: 4rem 0;
+            margin: 2rem auto;
+            max-width: 1000px;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-header h2 {
+            color: #1976D2;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .section-header p {
+            color: #666;
+            font-size: 1.2rem;
+        }
+
+        /* Game Overview */
+        .game-overview {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            margin-bottom: 4rem;
+        }
+
+        .overview-content h3 {
+            color: #1976D2;
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .overview-content p {
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .overview-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .overview-image img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Developer Info */
+        .developer-info {
+            margin-bottom: 4rem;
+        }
+
+        .developer-card {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 2rem;
+            border-radius: 15px;
+        }
+
+        .developer-card h3 {
+            color: #1976D2;
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+        }
+
+        .developer-details {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .developer-logo {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .developer-text h4 {
+            color: #333;
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .developer-text p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* Combined Games Section */
+        .combined-games-section {
+            margin-bottom: 4rem;
+        }
+
+        .combined-games-section h3 {
+            color: #1976D2;
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 1.8rem;
+        }
+
+        .combined-games-grid {
+            display: flex;
+            gap: 1rem;
+            height: 400px;
+            padding: 0.5rem 0;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .combined-games-scroll {
+            display: flex;
+            gap: 1rem;
+            animation: scroll-combined-games 25s linear infinite;
+        }
+
+        .combined-games-scroll:hover {
+            animation-play-state: paused;
+        }
+
+        .screenshot-item {
+            flex: 0 0 auto;
+        }
+
+        .screenshot-item img {
+            width: auto;
+            height: 360px;
+            object-fit: contain;
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease;
+        }
+
+        .related-game-item {
+            flex: 0 0 auto;
+        }
+
+        .related-game-item img {
+            width: auto;
+            height: 360px;
+            object-fit: contain;
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease;
+        }
+
+        .related-game-item img:hover,
+        .screenshot-item img:hover {
+            transform: scale(1.03);
+        }
+
+        .screenshot-item img:hover {
+            transform: scale(1.03);
+        }
+
+        /* Rike Games Other Products Section */
+        .rike-games-section {
+            margin-bottom: 4rem;
+        }
+
+        .rike-games-section h3 {
+            color: #1976D2;
+            text-align: center;
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+        }
+
+        .rike-games-grid {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            padding: 1rem 0;
+            flex-wrap: nowrap;
+        }
+
+        .rike-game-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            color: inherit;
+            transition: transform 0.3s ease;
+        }
+
+        .rike-game-item:hover {
+            transform: translateY(-2px);
+        }
+
+        .rike-game-item img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 12px;
+            display: block;
+            transition: transform 0.3s ease;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+            margin-bottom: 0.75rem;
+        }
+
+        .rike-game-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .game-title {
+            font-size: 0.9rem;
+            color: #666;
+            text-align: center;
+            transition: color 0.3s ease;
+            max-width: 120px;
+            line-height: 1.3;
+            font-weight: 500;
+            white-space: nowrap;
+        }
+
+        .rike-game-item:hover .game-title {
+            color: #1976D2;
+        }
+
+        /* Game Stats */
+        .game-stats {
+            margin-bottom: 4rem;
+        }
+
+        .game-stats h3 {
+            color: #1976D2;
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 1.8rem;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .stat-item {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 1.1rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .stat-sub {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        /* Tech Specs */
+        .tech-specs {
+            margin-bottom: 4rem;
+        }
+
+        .tech-specs h3 {
+            color: #1976D2;
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 1.8rem;
+        }
+
+        .specs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .spec-item {
+            background: rgba(33, 150, 243, 0.1);
+            padding: 1.5rem;
+            border-radius: 12px;
+            border-left: 4px solid #1976D2;
+        }
+
+        .spec-item h4 {
+            color: #1976D2;
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        .spec-item p {
+            color: #666;
+            margin: 0;
+        }
+
+        /* Player Reviews */
+        .player-reviews {
+            margin-bottom: 2rem;
+        }
+
+        .player-reviews h3 {
+            color: #1976D2;
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 1.8rem;
+        }
+
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .review-item {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .review-rating {
+            color: #ffc107;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .review-text {
+            color: #333;
+            font-style: italic;
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+
+        .review-author {
+            color: #666;
+            font-weight: bold;
+            text-align: right;
         }
 
         .feature-item {
@@ -545,6 +899,25 @@
             }
         }
 
+        /* Auto-scroll animations */
+        @keyframes scroll-combined-games {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        @keyframes scroll-rike-games {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
         /* Accessibility Improvements */
         @media (prefers-reduced-motion: reduce) {
             * {
@@ -571,9 +944,9 @@
                     🔥💧 Water vs Fire
                 </a>
                 <nav class="nav" role="navigation" aria-label="Main navigation">
-                    <a href="#game" aria-label="Play Game">Play Now</a>
-                    <a href="#features" aria-label="Game Features">Features</a>
-                    <a href="/contact" aria-label="Contact Us">Contact</a>
+                    <a href="#game" aria-label="Play Game">Play now</a>
+                    <a href="#about-water-vs-fire" aria-label="About Water vs Fire">About</a>
+                    <a href="#rike-games-section" aria-label="More Games from Rike Games">More games</a>
                 </nav>
             </div>
         </div>
@@ -590,17 +963,16 @@
 
             <!-- Game Section -->
             <section id="game" class="game-container" aria-label="Water vs Fire Game">
-                <div class="game-title">
-                    <h2>Play Water vs Fire Now</h2>
-                    <p>No download required - play instantly in your browser!</p>
-                    <div class="game-badges">
-                        <span class="badge">Casual</span>
-                        <span class="badge">Action</span>
-                        <span class="badge">Mobile</span>
-                        <span class="badge">3D</span>
-                    </div>
+                <h2 style="text-align: center; color: #1976D2; font-size: 2.5rem; margin-bottom: 0.75rem;">Play Water vs Fire Now</h2>
+                <p style="text-align: center; color: #718096; font-size: 1rem; margin-bottom: 1rem;">No download required - play instantly in your browser!</p>
+
+                <div style="display: flex; justify-content: center; gap: 0.5rem; margin-bottom: 1.5rem; flex-wrap: nowrap;">
+                    <span style="background: rgba(33, 150, 243, 0.2); color: #1976D2; padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.8rem; font-weight: 500;">Casual</span>
+                    <span style="background: rgba(33, 150, 243, 0.2); color: #1976D2; padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.8rem; font-weight: 500;">Action</span>
+                    <span style="background: rgba(33, 150, 243, 0.2); color: #1976D2; padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.8rem; font-weight: 500;">Mobile</span>
+                    <span style="background: rgba(33, 150, 243, 0.2); color: #1976D2; padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.8rem; font-weight: 500;">3D</span>
                 </div>
-                
+
                 <div class="game-image-container">
                     <a href="https://www.crazygames.com/game/water-vs-fire" 
                        target="_blank" 
@@ -678,10 +1050,176 @@
                 </div>
             </section>
 
-            <!-- Game Description Section -->
-            <section class="game-description" aria-label="Game Description">
-                <h3>About Water vs Fire</h3>
-                <p>Water vs Fire is a fun and fast-paced action game where your goal is to keep the flames under control! Spray water to damp down fires, collect coins as you play, and upgrade your abilities to take on even bigger blazes. With each upgrade, your character grows stronger, making it easier to face tougher challenges and keep the fire at bay.</p>
+
+            <!-- About the Game Section -->
+            <section id="about-water-vs-fire" class="about-game" aria-label="About Water vs Fire">
+                <div class="container">
+                    <div class="section-header">
+                        <h2>About Water vs Fire</h2>
+                        <p>Learn more about this exciting fire-fighting adventure</p>
+                    </div>
+
+                    <!-- Game Overview -->
+                    <div class="game-overview">
+                        <div class="overview-content">
+                            <h3>Game Overview</h3>
+                            <p>Water vs Fire is a fun and fast-paced action game where your goal is to keep the flames under control! Spray water to damp down fires, collect coins as you play, and upgrade your abilities to take on even bigger blazes. With each upgrade, your character grows stronger, making it easier to face tougher challenges and keep the fire at bay.</p>
+                            <p>Experience the ultimate fire-fighting action in this addictive casual game that combines strategy, quick reflexes, and satisfying gameplay mechanics.</p>
+                        </div>
+                        <div class="overview-image">
+                            <img src="game-icon.webp" alt="Water vs Fire Game Icon" loading="lazy">
+                        </div>
+                    </div>
+
+                    <!-- Developer Info -->
+                    <div class="developer-info">
+                        <div class="developer-card">
+                            <h3>Developer</h3>
+                            <div class="developer-details">
+                                <img src="game-icon.webp" alt="Rike Games Logo" class="developer-logo">
+                                <div class="developer-text">
+                                    <h4>Rike Games</h4>
+                                    <p>A passionate game development studio dedicated to creating engaging and entertaining mobile experiences. Known for producing high-quality casual games with intuitive controls and addictive gameplay.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Combined Screenshots and Related Games Row -->
+                    <div class="combined-games-section">
+                        <h3>Game Media Gallery</h3>
+                        <div class="combined-games-grid">
+                            <div class="combined-games-scroll">
+                                <!-- Screenshots first -->
+                                <div class="screenshot-item">
+                                    <img src="screenshot1.webp" alt="Water vs Fire Gameplay Screenshot 1" loading="lazy">
+                                </div>
+                                <div class="screenshot-item">
+                                    <img src="screenshot2.webp" alt="Water vs Fire Gameplay Screenshot 2" loading="lazy">
+                                </div>
+                                <div class="screenshot-item">
+                                    <img src="screenshot3.webp" alt="Water vs Fire Gameplay Screenshot 3" loading="lazy">
+                                </div>
+                                <!-- Related Games next -->
+                                <div class="related-game-item">
+                                    <img src="related-game5.webp" alt="Related Game 5" loading="lazy">
+                                </div>
+                                <div class="related-game-item">
+                                    <img src="related-game6.webp" alt="Related Game 6" loading="lazy">
+                                </div>
+                                <div class="related-game-item">
+                                    <img src="related-game7.webp" alt="Related Game 7" loading="lazy">
+                                </div>
+                                <div class="related-game-item">
+                                    <img src="related-game8.webp" alt="Related Game 8" loading="lazy">
+                                </div>
+                                <div class="related-game-item">
+                                    <img src="related-game9.webp" alt="Related Game 9" loading="lazy">
+                                </div>
+                                <div class="related-game-item">
+                                    <img src="related-game10.webp" alt="Related Game 10" loading="lazy">
+                                </div>
+                                <!-- Duplicate for seamless looping -->
+                                <div class="screenshot-item">
+                                    <img src="screenshot1.webp" alt="Water vs Fire Gameplay Screenshot 1" loading="lazy">
+                                </div>
+                                <div class="screenshot-item">
+                                    <img src="screenshot2.webp" alt="Water vs Fire Gameplay Screenshot 2" loading="lazy">
+                                </div>
+                                <div class="screenshot-item">
+                                    <img src="screenshot3.webp" alt="Water vs Fire Gameplay Screenshot 3" loading="lazy">
+                                </div>
+                                <div class="related-game-item">
+                                    <img src="related-game5.webp" alt="Related Game 5" loading="lazy">
+                                </div>
+                                <div class="related-game-item">
+                                    <img src="related-game6.webp" alt="Related Game 6" loading="lazy">
+                                </div>
+                                <div class="related-game-item">
+                                    <img src="related-game7.webp" alt="Related Game 7" loading="lazy">
+                                </div>
+                                <div class="related-game-item">
+                                    <img src="related-game8.webp" alt="Related Game 8" loading="lazy">
+                                </div>
+                                <div class="related-game-item">
+                                    <img src="related-game9.webp" alt="Related Game 9" loading="lazy">
+                                </div>
+                                <div class="related-game-item">
+                                    <img src="related-game10.webp" alt="Related Game 10" loading="lazy">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Rike Games Other Products -->
+                    <div id="rike-games-section" class="rike-games-section">
+                        <h3>More Games from Rike Games</h3>
+                        <div class="rike-games-grid">
+                            <a href="https://www.crazygames.com/game/data-diggers" target="_blank" rel="noopener" class="rike-game-item">
+                                <img src="../Rike Games的其他产品/Data Diggers.webp" alt="Data Diggers Game by Rike Games" loading="lazy">
+                                <div class="game-title">Data Diggers</div>
+                            </a>
+                            <a href="https://www.crazygames.com/game/no-pain-no-gain---ragdoll-sandbox" target="_blank" rel="noopener" class="rike-game-item">
+                                <img src="../Rike Games的其他产品/No pain no gain!.webp" alt="No pain no gain! Game by Rike Games" loading="lazy">
+                                <div class="game-title">No pain no gain!</div>
+                            </a>
+                            <a href="https://www.crazygames.com/game/world-z-defense---zombie-defense" target="_blank" rel="noopener" class="rike-game-item">
+                                <img src="../Rike Games的其他产品/World Z Defense.webp" alt="World Z Defense Game by Rike Games" loading="lazy">
+                                <div class="game-title">World Z Defense</div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Game Stats -->
+                    <div class="game-stats">
+                        <div class="stats-grid">
+                            <div class="stat-item">
+                                <div class="stat-number">9.1</div>
+                                <div class="stat-label">User Rating</div>
+                                <div class="stat-sub">1,274 votes</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">1M+</div>
+                                <div class="stat-label">Downloads</div>
+                                <div class="stat-sub">Android & iOS</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">4.5★</div>
+                                <div class="stat-label">Store Rating</div>
+                                <div class="stat-sub">Google Play</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">2025</div>
+                                <div class="stat-label">Released</div>
+                                <div class="stat-sub">Latest Version</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Technical Specifications -->
+                    <div class="tech-specs">
+                        <h3>Technical Information</h3>
+                        <div class="specs-grid">
+                            <div class="spec-item">
+                                <h4>Platform</h4>
+                                <p>Web Browser, iOS, Android, PC, Tablet</p>
+                            </div>
+                            <div class="spec-item">
+                                <h4>Technology</h4>
+                                <p>HTML5, Unity WebGL</p>
+                            </div>
+                            <div class="spec-item">
+                                <h4>Game Size</h4>
+                                <p>Lightweight - Instant Play</p>
+                            </div>
+                            <div class="spec-item">
+                                <h4>Internet</h4>
+                                <p>Required for online play</p>
+                            </div>
+                        </div>
+                    </div>
+
+                  </div>
             </section>
 
             <!-- Features Section -->
