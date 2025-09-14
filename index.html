@@ -3,16 +3,27 @@
 <head>
     <!-- Basic Meta Tags -->
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Mobile Optimization Meta Tags -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Water vs Fire">
+    <meta name="theme-color" content="#1976D2">
+    <meta name="msapplication-TileColor" content="#1976D2">
     
     <!-- SEO Meta Tags -->
-    <title>Water vs Fire - Play Free Online Battle Game</title>
-    <meta name="description" content="Play Water vs Fire online for free! A fast-paced action game where you spray water to control fires, collect coins, and upgrade your abilities. No download required - play instantly in your browser!">
-    <meta name="keywords" content="water vs fire, water fire game, action game, casual game, arcade game, fire control, water spray, online game, free game, mobile game, unity game, webgl game">
-    <meta name="author" content="Water vs Fire">
+    <title>Water vs Fire Game - Play Free Online Fire Fighting Game | No Download</title>
+    <meta name="description" content="Play Water vs Fire online free! The ultimate fire fighting action game where you control water to extinguish flames, collect coins, and upgrade your firefighter abilities. Experience addictive gameplay, challenging levels, and become the best fire fighter. No download required - play instantly in browser!">
+    <meta name="keywords" content="water vs fire game, play water vs fire online, free fire fighting game, water vs fire unblocked, firefighter game, extinguish fire game, water spray game, action arcade game, casual mobile game, unity webgl game, no download game, browser game, coin collection game, upgrade abilities game">
+    <meta name="author" content="Water vs Fire Game">
     <meta name="robots" content="index, follow">
     <meta name="language" content="English">
+    <meta name="revisit-after" content="1 days">
+    <meta name="distribution" content="global">
+    <meta name="rating" content="general">
     
     <!-- Canonical URL -->
     <link rel="canonical" href="https://watervsfire.com/">
@@ -37,6 +48,7 @@
     <meta name="twitter:image:alt" content="Water vs Fire Game Screenshot">
     
     <!-- Favicons and PWA Manifest -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -50,6 +62,14 @@
     <link rel="dns-prefetch" href="https://www.crazygames.com">
     <link rel="preconnect" href="https://www.googletagmanager.com">
     <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+
+    <!-- Performance Optimization -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Resource Hints -->
+    <link rel="preload" href="WaterVsFire.png" as="image" importance="high">
+    <link rel="preload" href="game-icon.webp" as="image" importance="high">
     
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-4XBYLQNVLJ"></script>
@@ -61,24 +81,65 @@
         gtag('config', 'G-4XBYLQNVLJ');
     </script>
     
-    <!-- Schema.org Structured Data -->
+    <!-- Enhanced Schema.org Structured Data -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "Game",
         "name": "Water vs Fire",
-        "description": "Play Water vs Fire online for free! A fast-paced action game where you spray water to control fires, collect coins, and upgrade your abilities.",
+        "alternateName": "Water vs Fire Game",
+        "description": "Play Water vs Fire online free! The ultimate fire fighting action game where you control water to extinguish flames, collect coins, and upgrade your firefighter abilities.",
         "url": "https://watervsfire.com/",
-        "genre": ["Action", "Casual", "Arcade"],
-        "gamePlatform": "Web Browser",
-        "operatingSystem": "Any",
+        "genre": ["Action Game", "Casual Game", "Arcade Game", "Fire Fighting Game", "Mobile Game"],
+        "gamePlatform": ["Web Browser", "Desktop", "Mobile", "Tablet"],
+        "operatingSystem": ["Windows", "MacOS", "Linux", "Android", "iOS"],
         "applicationCategory": "Game",
+        "applicationSubCategory": "Action Game",
         "isAccessibleForFree": true,
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
         "inLanguage": "en",
+        "author": {
+            "@type": "Organization",
+            "name": "Rike Games"
+        },
         "publisher": {
             "@type": "Organization",
-            "name": "Water vs Fire"
-        }
+            "name": "Rike Games",
+            "url": "https://www.crazygames.com/developer/rike-games"
+        },
+        "gameItem": {
+            "@type": "Thing",
+            "name": "Water vs Fire Game",
+            "description": "Free online fire fighting action game with water spraying mechanics"
+        },
+        "numberOfPlayers": {
+            "@type": "QuantitativeValue",
+            "value": "1"
+        },
+        "typicalAgeRange": "8+"
+    }
+    </script>
+
+    <!-- Additional Schema for WebSite -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Water vs Fire Game",
+        "alternateName": "Water vs Fire",
+        "description": "Play free online Water vs Fire game - The ultimate fire fighting action game",
+        "url": "https://watervsfire.com/",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://watervsfire.com/?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+        },
+        "inLanguage": "en",
+        "isAccessibleForFree": true
     }
     </script>
     
@@ -114,6 +175,27 @@
             position: sticky;
             top: 0;
             z-index: 100;
+        }
+
+        /* Mobile Menu Toggle */
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #1976D2;
+            padding: 0.5rem;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .menu-toggle:hover {
+            background: rgba(33, 150, 243, 0.1);
+        }
+
+        .menu-toggle.active {
+            color: #FF5722;
         }
 
         .container {
@@ -152,10 +234,17 @@
             text-decoration: none;
             font-weight: 500;
             transition: color 0.3s ease;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
         }
 
         .nav a:hover {
             color: #1976D2;
+            background: rgba(33, 150, 243, 0.1);
+        }
+
+        .nav a:active {
+            transform: scale(0.95);
         }
 
         /* Main Content */
@@ -234,6 +323,8 @@
             position: relative;
             display: block;
             text-decoration: none;
+            touch-action: manipulation;
+            -webkit-tap-highlight-color: transparent;
         }
 
         .game-image {
@@ -242,6 +333,7 @@
             display: block;
             border-radius: 12px;
             transition: filter 0.3s ease;
+            touch-action: manipulation;
         }
 
         .game-link:hover .game-image {
@@ -279,6 +371,10 @@
             font-weight: bold;
             transform: scale(0.9);
             transition: all 0.3s ease;
+            touch-action: manipulation;
+            -webkit-tap-highlight-color: transparent;
+            min-height: 48px;
+            min-width: 48px;
         }
 
         .game-link:hover .play-button {
@@ -844,30 +940,218 @@
         }
 
         /* Responsive Design */
-        @media (max-width: 768px) {
-            .header-content {
-                justify-content: center;
-                text-align: center;
+        @media (max-width: 1024px) {
+            .container {
+                padding: 0 1rem;
             }
 
-            .nav {
-                margin-top: 1rem;
-                justify-content: center;
+            .hero h1 {
+                font-size: clamp(2rem, 4vw, 3rem);
             }
 
             .game-container {
-                margin: 1rem;
-                padding: 1rem;
+                max-width: 100%;
+                margin: 0 1rem 2rem 1rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            /* Mobile Menu Toggle */
+            .menu-toggle {
+                display: block;
             }
 
-            .features {
-                margin: 1rem;
+            .header-content {
+                justify-content: space-between;
+                align-items: center;
+                text-align: left;
+            }
+
+            .nav {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: rgba(255, 255, 255, 0.98);
+                backdrop-filter: blur(10px);
+                flex-direction: column;
+                padding: 1rem;
+                margin-top: 0;
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+                border-radius: 0 0 15px 15px;
+                gap: 0.5rem;
+            }
+
+            .nav.active {
+                display: flex;
+            }
+
+            .nav a {
+                padding: 0.75rem 1rem;
+                text-align: center;
+                border-radius: 8px;
+                font-size: 1rem;
+            }
+
+            /* Game Container */
+            .game-container {
+                margin: 0 0.5rem 1.5rem 0.5rem;
+                padding: 1rem;
+                border-radius: 15px;
+            }
+
+            .game-title h2 {
+                font-size: 1.5rem;
+            }
+
+            /* Hero Section */
+            .hero h1 {
+                font-size: clamp(1.8rem, 5vw, 2.5rem);
+                margin-bottom: 0.75rem;
+            }
+
+            .hero p {
+                font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+                padding: 0 1rem;
+            }
+
+            /* Game Badges */
+            .game-badges {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 0.3rem;
+            }
+
+            .badge {
+                font-size: 0.7rem;
+                padding: 0.2rem 0.6rem;
+            }
+
+            /* Features Grid */
+            .features-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .feature-item {
+                padding: 1.25rem;
+            }
+
+            /* Game Details */
+            .game-details-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            /* Controls */
+            .controls-content {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 0.75rem;
+            }
+
+            .control-item {
+                padding: 0.75rem;
+            }
+
+            .control-key {
+                padding: 0.4rem 0.8rem;
+                font-size: 0.9rem;
+            }
+
+            .control-desc {
+                font-size: 0.8rem;
+            }
+
+            /* Game Overview */
+            .game-overview {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            /* Developer Info */
+            .developer-details {
+                flex-direction: column;
+                text-align: center;
+                gap: 1rem;
+            }
+
+            .developer-logo {
+                width: 60px;
+                height: 60px;
+            }
+
+            /* Combined Games */
+            .combined-games-grid {
+                height: 300px;
+            }
+
+            .screenshot-item img,
+            .related-game-item img {
+                height: 280px;
+            }
+
+            /* Rike Games Grid */
+            .rike-games-grid {
+                grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+                gap: 0.8rem;
+            }
+
+            .rike-game-item img {
+                width: 80px;
+                height: 80px;
+            }
+
+            .game-title {
+                font-size: 0.8rem;
+                max-width: 100px;
+            }
+
+            /* Stats Grid */
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
+            }
+
+            .stat-item {
                 padding: 1.5rem;
             }
 
+            .stat-number {
+                font-size: 2rem;
+            }
+
+            /* Tech Specs */
+            .specs-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            /* Play Button */
+            .play-button {
+                padding: 0.8rem 1.5rem;
+                min-height: 44px;
+            }
+
+            .play-text {
+                font-size: 0.9rem;
+            }
+
+            /* Footer */
             .footer-links {
                 flex-direction: column;
-                gap: 1rem;
+                gap: 0.8rem;
+                align-items: center;
+            }
+
+            .footer-links a {
+                padding: 0.5rem 1rem;
+                border-radius: 8px;
+                transition: all 0.3s ease;
+            }
+
+            .footer-links a:hover {
+                background: rgba(255, 255, 255, 0.1);
             }
         }
 
@@ -876,20 +1160,108 @@
                 padding: 0 0.5rem;
             }
 
+            .header {
+                padding: 0.75rem 0;
+            }
+
+            .logo {
+                font-size: 1.5rem;
+            }
+
             .hero h1 {
-                font-size: 2rem;
+                font-size: clamp(1.5rem, 6vw, 2rem);
             }
 
             .hero p {
+                font-size: clamp(0.85rem, 3vw, 1rem);
+            }
+
+            .game-container {
+                margin: 0 0.25rem 1rem 0.25rem;
+                padding: 0.75rem;
+                border-radius: 12px;
+            }
+
+            .game-title h2 {
+                font-size: 1.3rem;
+            }
+
+            .game-title p {
+                font-size: 0.9rem;
+            }
+
+            /* Controls */
+            .controls-content {
+                grid-template-columns: 1fr;
+                gap: 0.5rem;
+            }
+
+            .control-item {
+                padding: 0.5rem;
+            }
+
+            /* Combined Games */
+            .combined-games-grid {
+                height: 250px;
+            }
+
+            .screenshot-item img,
+            .related-game-item img {
+                height: 230px;
+            }
+
+            /* Rike Games */
+            .rike-games-grid {
+                grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+                gap: 0.6rem;
+            }
+
+            .rike-game-item img {
+                width: 70px;
+                height: 70px;
+            }
+
+            .game-title {
+                font-size: 0.75rem;
+                max-width: 80px;
+            }
+
+            /* Stats */
+            .stat-number {
+                font-size: 1.8rem;
+            }
+
+            .stat-label {
                 font-size: 1rem;
             }
 
-            .nav {
-                gap: 1rem;
+            .stat-sub {
+                font-size: 0.8rem;
             }
 
-            .nav a {
-                font-size: 0.9rem;
+            /* Play Button */
+            .play-button {
+                padding: 0.7rem 1.2rem;
+                min-height: 40px;
+            }
+
+            .play-text {
+                font-size: 0.85rem;
+            }
+
+            .play-icon {
+                font-size: 1rem;
+            }
+
+            /* Touch-friendly spacing */
+            .nav a,
+            .footer-links a,
+            .feature-item,
+            .game-detail-item {
+                min-height: 44px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
             }
         }
 
@@ -900,6 +1272,74 @@
             }
         }
 
+        /* Image Lazy Loading Styles */
+        img[loading="lazy"] {
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        img[loading="lazy"].loaded {
+            opacity: 1;
+        }
+
+        /* Fallback for browsers that don't support lazy loading */
+        img:not([loading]) {
+            opacity: 1;
+        }
+
+        /* Mobile Image Optimization */
+        @media (max-width: 768px) {
+            img {
+                max-width: 100%;
+                height: auto;
+                border-radius: 8px;
+            }
+
+            .game-image {
+                border-radius: 10px;
+            }
+
+            .overview-image img,
+            .developer-logo {
+                border-radius: 8px;
+            }
+
+            .screenshot-item img,
+            .related-game-item img {
+                border-radius: 8px;
+            }
+
+            .rike-game-item img {
+                border-radius: 8px;
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            }
+        }
+
+        /* Prevent image overflow on mobile */
+        @media (max-width: 480px) {
+            .game-image-container {
+                overflow: hidden;
+                border-radius: 10px;
+            }
+
+            .combined-games-grid,
+            .rike-games-grid {
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+                scrollbar-width: none;
+                -ms-overflow-style: none;
+            }
+
+            .combined-games-grid::-webkit-scrollbar,
+            .rike-games-grid::-webkit-scrollbar {
+                display: none;
+            }
+        }
+
+        /* Loading spinner removed for better user experience */
+
+        
+        
         /* Auto-scroll animations */
         @keyframes scroll-combined-games {
             0% {
@@ -944,6 +1384,9 @@
                 <a href="/" class="logo" aria-label="Water vs Fire Home">
                     🔥💧 Water vs Fire
                 </a>
+                <button class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                    ☰
+                </button>
                 <nav class="nav" role="navigation" aria-label="Main navigation">
                     <a href="#game" aria-label="Play Game">Play now</a>
                     <a href="#about-water-vs-fire" aria-label="About Water vs Fire">About</a>
@@ -958,14 +1401,14 @@
         <div class="container">
             <!-- Hero Section -->
             <section class="hero">
-                <h1>Welcome to Water vs Fire</h1>
-                <p>Experience the ultimate fire-fighting action! Spray water to control fires, collect coins, and upgrade your abilities in this exciting free-to-play game.</p>
+                <h1>Welcome to Water vs Fire Game</h1>
+                <p style="max-width: 900px; margin: 0 auto; line-height: 1.3;">Water vs Fire is a fast-paced action game! Spray water to control fires, collect coins to upgrade abilities, and battle bigger blazes. Stay sharp and enjoy this thrilling addictive game!</p>
             </section>
 
             <!-- Game Section -->
             <section id="game" class="game-container" aria-label="Water vs Fire Game">
-                <h2 style="text-align: center; color: #1976D2; font-size: 2.5rem; margin-bottom: 0.75rem;">Play Water vs Fire Now</h2>
-                <p style="text-align: center; color: #718096; font-size: 1rem; margin-bottom: 1rem;">No download required - play instantly in your browser!</p>
+                <h2 style="text-align: center; color: #1976D2; font-size: 2.5rem; margin-bottom: 0.75rem;">Play Water vs Fire Game Now</h2>
+                <p style="text-align: center; color: #718096; font-size: 1rem; margin-bottom: 1rem;">🔥 Unblocked free fire fighting game - No download required! Play instantly in your browser! 🚒</p>
 
                 <div style="display: flex; justify-content: center; gap: 0.5rem; margin-bottom: 1.5rem; flex-wrap: nowrap;">
                     <span style="background: rgba(33, 150, 243, 0.2); color: #1976D2; padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.8rem; font-weight: 500;">Casual</span>
@@ -980,10 +1423,10 @@
                        rel="noopener" 
                        class="game-link"
                        aria-label="Play Water vs Fire on CrazyGames">
-                        <img src="WaterVsFire.png" 
-                             alt="Water vs Fire Game Screenshot - Click to Play" 
+                        <img src="WaterVsFire.png"
+                             alt="Water vs Fire Game - Free Online Fire Fighting Game Screenshot - Click to Play Now"
                              class="game-image"
-                             loading="lazy">
+                             fetchpriority="high">
                         <div class="play-overlay">
                             <div class="play-button">
                                 <span class="play-icon">▶</span>
@@ -1060,15 +1503,16 @@
                         <p>Learn more about this exciting fire-fighting adventure</p>
                     </div>
 
-                    <!-- Game Overview -->
+                    <!-- Enhanced Game Overview -->
                     <div class="game-overview">
                         <div class="overview-content">
-                            <h3>Game Overview</h3>
-                            <p>Water vs Fire is a fun and fast-paced action game where your goal is to keep the flames under control! Spray water to damp down fires, collect coins as you play, and upgrade your abilities to take on even bigger blazes. With each upgrade, your character grows stronger, making it easier to face tougher challenges and keep the fire at bay.</p>
-                            <p>Experience the ultimate fire-fighting action in this addictive casual game that combines strategy, quick reflexes, and satisfying gameplay mechanics.</p>
+                            <h3>Water vs Fire Game Overview</h3>
+                            <p>Water vs Fire is an exciting free online fire fighting game where you become a heroic firefighter! Your mission is to control dangerous flames using your powerful water spraying abilities. This action-packed arcade game challenges you to extinguish spreading fires while collecting valuable coins for upgrades.</p>
+                            <p>In this firefighter simulator game, you'll face increasingly challenging levels where fire spreads rapidly and requires quick thinking and strategic water management. Upgrade your equipment to become more efficient at fire control and rescue operations. The game features addictive gameplay mechanics perfect for fans of emergency response games and action arcade titles.</p>
+                            <p>Key features include: realistic water physics, progressive difficulty, upgradeable firefighter equipment, coin collection system, and engaging fire rescue scenarios. Whether you're looking for a casual browser game or an intense action experience, Water vs Fire delivers thrilling gameplay that tests your reflexes and decision-making skills.</p>
                         </div>
                         <div class="overview-image">
-                            <img src="game-icon.webp" alt="Water vs Fire Game Icon" loading="lazy">
+                            <img src="game-icon.webp" alt="Water vs Fire Game Icon - Free Fire Fighting Action Game" loading="lazy">
                         </div>
                     </div>
 
@@ -1077,7 +1521,7 @@
                         <div class="developer-card">
                             <h3>Developer</h3>
                             <div class="developer-details">
-                                <img src="game-icon.webp" alt="Rike Games Logo" class="developer-logo">
+                                <img src="game-icon.webp" alt="Rike Games Developer Logo - Creator of Water vs Fire Game" class="developer-logo" loading="lazy">
                                 <div class="developer-text">
                                     <h4>Rike Games</h4>
                                     <p>A passionate game development studio dedicated to creating engaging and entertaining mobile experiences. Known for producing high-quality casual games with intuitive controls and addictive gameplay.</p>
@@ -1093,60 +1537,60 @@
                             <div class="combined-games-scroll">
                                 <!-- Screenshots first -->
                                 <div class="screenshot-item">
-                                    <img src="screenshot1.webp" alt="Water vs Fire Gameplay Screenshot 1" loading="lazy">
+                                    <img src="screenshot1.webp" alt="Water vs Fire Game Level 1 Screenshot - Player spraying water to control fire" loading="lazy">
                                 </div>
                                 <div class="screenshot-item">
-                                    <img src="screenshot2.webp" alt="Water vs Fire Gameplay Screenshot 2" loading="lazy">
+                                    <img src="screenshot2.webp" alt="Water vs Fire Game Level 2 Screenshot - Multiple fires requiring strategic water management" loading="lazy">
                                 </div>
                                 <div class="screenshot-item">
-                                    <img src="screenshot3.webp" alt="Water vs Fire Gameplay Screenshot 3" loading="lazy">
+                                    <img src="screenshot3.webp" alt="Water vs Fire Game Advanced Level Screenshot - Challenging fire spread scenarios" loading="lazy">
                                 </div>
                                 <!-- Related Games next -->
                                 <div class="related-game-item">
-                                    <img src="related-game5.webp" alt="Related Game 5" loading="lazy">
+                                    <img src="related-game5.webp" alt="Similar Fire Fighting Game - Emergency Response Game Alternative" loading="lazy">
                                 </div>
                                 <div class="related-game-item">
-                                    <img src="related-game6.webp" alt="Related Game 6" loading="lazy">
+                                    <img src="related-game6.webp" alt="Action Arcade Game Similar to Water vs Fire - Casual Gaming Alternative" loading="lazy">
                                 </div>
                                 <div class="related-game-item">
-                                    <img src="related-game7.webp" alt="Related Game 7" loading="lazy">
+                                    <img src="related-game7.webp" alt="Water Spraying Game Like Water vs Fire - Fire Control Game Alternative" loading="lazy">
                                 </div>
                                 <div class="related-game-item">
-                                    <img src="related-game8.webp" alt="Related Game 8" loading="lazy">
+                                    <img src="related-game8.webp" alt="Coin Collection Game Similar to Water vs Fire - Upgrade System Game" loading="lazy">
                                 </div>
                                 <div class="related-game-item">
-                                    <img src="related-game9.webp" alt="Related Game 9" loading="lazy">
+                                    <img src="related-game9.webp" alt="Fire Rescue Game Like Water vs Fire - Emergency Simulator Game" loading="lazy">
                                 </div>
                                 <div class="related-game-item">
-                                    <img src="related-game10.webp" alt="Related Game 10" loading="lazy">
+                                    <img src="related-game10.webp" alt="Mobile Fire Fighting Game - Browser-Based Action Game Alternative" loading="lazy">
                                 </div>
                                 <!-- Duplicate for seamless looping -->
                                 <div class="screenshot-item">
-                                    <img src="screenshot1.webp" alt="Water vs Fire Gameplay Screenshot 1" loading="lazy">
+                                    <img src="screenshot1.webp" alt="Water vs Fire Game Level 1 Screenshot - Player spraying water to control fire" loading="lazy">
                                 </div>
                                 <div class="screenshot-item">
-                                    <img src="screenshot2.webp" alt="Water vs Fire Gameplay Screenshot 2" loading="lazy">
+                                    <img src="screenshot2.webp" alt="Water vs Fire Game Level 2 Screenshot - Multiple fires requiring strategic water management" loading="lazy">
                                 </div>
                                 <div class="screenshot-item">
-                                    <img src="screenshot3.webp" alt="Water vs Fire Gameplay Screenshot 3" loading="lazy">
+                                    <img src="screenshot3.webp" alt="Water vs Fire Game Advanced Level Screenshot - Challenging fire spread scenarios" loading="lazy">
                                 </div>
                                 <div class="related-game-item">
-                                    <img src="related-game5.webp" alt="Related Game 5" loading="lazy">
+                                    <img src="related-game5.webp" alt="Similar Fire Fighting Game - Emergency Response Game Alternative" loading="lazy">
                                 </div>
                                 <div class="related-game-item">
-                                    <img src="related-game6.webp" alt="Related Game 6" loading="lazy">
+                                    <img src="related-game6.webp" alt="Action Arcade Game Similar to Water vs Fire - Casual Gaming Alternative" loading="lazy">
                                 </div>
                                 <div class="related-game-item">
-                                    <img src="related-game7.webp" alt="Related Game 7" loading="lazy">
+                                    <img src="related-game7.webp" alt="Water Spraying Game Like Water vs Fire - Fire Control Game Alternative" loading="lazy">
                                 </div>
                                 <div class="related-game-item">
-                                    <img src="related-game8.webp" alt="Related Game 8" loading="lazy">
+                                    <img src="related-game8.webp" alt="Coin Collection Game Similar to Water vs Fire - Upgrade System Game" loading="lazy">
                                 </div>
                                 <div class="related-game-item">
-                                    <img src="related-game9.webp" alt="Related Game 9" loading="lazy">
+                                    <img src="related-game9.webp" alt="Fire Rescue Game Like Water vs Fire - Emergency Simulator Game" loading="lazy">
                                 </div>
                                 <div class="related-game-item">
-                                    <img src="related-game10.webp" alt="Related Game 10" loading="lazy">
+                                    <img src="related-game10.webp" alt="Mobile Fire Fighting Game - Browser-Based Action Game Alternative" loading="lazy">
                                 </div>
                             </div>
                         </div>
@@ -1239,50 +1683,204 @@
                   </div>
             </section>
 
-            <!-- Features Section -->
+            <!-- FAQ Section for SEO -->
+            <section class="game-info" aria-label="Frequently Asked Questions">
+                <h3 style="text-align: center; color: #1976D2; font-size: 1.8rem; margin-bottom: 2rem;">Water vs Fire Game FAQ</h3>
+                <div class="game-details-grid">
+                    <div class="game-detail-item">
+                        <div class="detail-icon">❓</div>
+                        <div class="detail-content">
+                            <h4>How do I play Water vs Fire?</h4>
+                            <p>Use WASD or arrow keys to move your firefighter character. Position yourself near fires to automatically spray water and extinguish flames. Collect coins to upgrade your equipment and abilities.</p>
+                        </div>
+                    </div>
+                    <div class="game-detail-item">
+                        <div class="detail-icon">💰</div>
+                        <div class="detail-content">
+                            <h4>Is Water vs Fire really free?</h4>
+                            <p>Yes! Water vs Fire is completely free to play online with no download required. Just visit our website and start playing instantly in your browser.</p>
+                        </div>
+                    </div>
+                    <div class="game-detail-item">
+                        <div class="detail-icon">📱</div>
+                        <div class="detail-content">
+                            <h4>Can I play on mobile devices?</h4>
+                            <p>Absolutely! Water vs Fire works on all devices including smartphones, tablets, and desktop computers. The game is optimized for both touch and keyboard controls.</p>
+                        </div>
+                    </div>
+                    <div class="game-detail-item">
+                        <div class="detail-icon">🎯</div>
+                        <div class="detail-content">
+                            <h4>What makes Water vs Fire addictive?</h4>
+                            <p>The game combines strategic thinking with fast-paced action. Progressive difficulty, upgrade systems, and satisfying fire-fighting mechanics keep players engaged for hours.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+          <!-- Enhanced Features Section -->
             <section id="features" class="features" aria-label="Game Features">
-                <h3>Why Play Water vs Fire?</h3>
+                <h3>Why Play Water vs Fire Game?</h3>
                 <div class="features-grid">
                     <div class="feature-item">
                         <div class="feature-icon" aria-hidden="true">🎮</div>
-                        <h4>Free to Play</h4>
-                        <p>Completely free online game with no downloads or installations required</p>
+                        <h4>100% Free to Play</h4>
+                        <p>Completely free online fire fighting game with no downloads, no registration, and no installations required</p>
                     </div>
                     <div class="feature-item">
                         <div class="feature-icon" aria-hidden="true">💧</div>
-                        <h4>Fire Fighting Action</h4>
-                        <p>Spray water to control fires and become the ultimate fire fighter</p>
+                        <h4>Realistic Fire Fighting</h4>
+                        <p>Experience authentic firefighter gameplay with water spray mechanics and fire physics simulation</p>
                     </div>
                     <div class="feature-item">
                         <div class="feature-icon" aria-hidden="true">🪙</div>
-                        <h4>Collect & Upgrade</h4>
-                        <p>Gather coins and upgrade your abilities to tackle bigger challenges</p>
+                        <h4>Upgrade System</h4>
+                        <p>Collect coins and unlock powerful upgrades to enhance your firefighting abilities and equipment</p>
                     </div>
                     <div class="feature-item">
                         <div class="feature-icon" aria-hidden="true">📱</div>
                         <h4>Multi-Platform</h4>
-                        <p>Play on desktop, mobile, tablet, iOS, and Android devices</p>
+                        <p>Play seamlessly on desktop, mobile, tablet, iOS, and Android devices with optimized controls</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon" aria-hidden="true">🚒</div>
+                        <h4>Emergency Response</h4>
+                        <p>Feel the thrill of being a firefighter in challenging rescue scenarios and fire control missions</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon" aria-hidden="true">⚡</div>
+                        <h4>Instant Action</h4>
+                        <p>No waiting, no loading - jump straight into the action with our browser-based gaming technology</p>
                     </div>
                 </div>
             </section>
         </div>
     </main>
 
-    <!-- Footer -->
+    <!-- Enhanced Footer with SEO Keywords -->
     <footer class="footer" id="about">
         <div class="container">
-            <p>&copy; 2024 Water vs Fire. The best online fire-fighting action game.</p>
+            <p>&copy; 2024 Water vs Fire Game. The best free online fire fighting action game. Play unblocked Water vs Fire with no download required.</p>
             <div class="footer-links">
                 <a href="/privacy" rel="nofollow">Privacy Policy</a>
                 <a href="/terms" rel="nofollow">Terms of Service</a>
                 <a href="/contact" rel="nofollow">Contact Us</a>
                 <a href="https://www.crazygames.com/game/water-vs-fire" target="_blank" rel="noopener">Play on CrazyGames</a>
             </div>
+            <!-- SEO Keywords Section -->
+            <div style="margin-top: 20px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.2);">
+                <p style="font-size: 0.9em; opacity: 0.8; text-align: center;">
+                    Popular searches: free water vs fire game, play water vs fire online, unblocked fire fighting game, firefighter simulator, water spray game, extinguish fire game, action arcade game, casual browser game, no download game, mobile game, coin collection game, upgrade abilities game, fire rescue game, emergency response game
+                </p>
+            </div>
         </div>
     </footer>
 
     <!-- JavaScript -->
     <script>
+        // Enhanced Mobile Menu and Image Lazy Loading
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile Menu Toggle
+            const menuToggle = document.querySelector('.menu-toggle');
+            const nav = document.querySelector('.nav');
+            const navLinks = document.querySelectorAll('.nav a');
+
+            if (menuToggle && nav) {
+                menuToggle.addEventListener('click', function() {
+                    const isExpanded = this.getAttribute('aria-expanded') === 'true';
+                    this.setAttribute('aria-expanded', !isExpanded);
+                    this.classList.toggle('active');
+                    nav.classList.toggle('active');
+
+                    // Change icon
+                    this.textContent = isExpanded ? '☰' : '✕';
+                });
+
+                // Close menu when clicking on links
+                navLinks.forEach(link => {
+                    link.addEventListener('click', function() {
+                        menuToggle.setAttribute('aria-expanded', 'false');
+                        menuToggle.classList.remove('active');
+                        nav.classList.remove('active');
+                        menuToggle.textContent = '☰';
+                    });
+                });
+
+                // Close menu when clicking outside
+                document.addEventListener('click', function(event) {
+                    if (!menuToggle.contains(event.target) && !nav.contains(event.target)) {
+                        menuToggle.setAttribute('aria-expanded', 'false');
+                        menuToggle.classList.remove('active');
+                        nav.classList.remove('active');
+                        menuToggle.textContent = '☰';
+                    }
+                });
+            }
+
+            // Handle lazy loaded images
+            const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+
+            // Add loaded class when images finish loading
+            lazyImages.forEach(img => {
+                img.addEventListener('load', function() {
+                    this.classList.add('loaded');
+                });
+
+                // Fallback: if image is already cached
+                if (img.complete) {
+                    img.classList.add('loaded');
+                }
+            });
+
+            // Ensure main game image is immediately visible
+            const mainGameImage = document.querySelector('.game-image');
+            if (mainGameImage) {
+                mainGameImage.style.opacity = '1';
+            }
+
+            // Intersection Observer for enhanced lazy loading (fallback)
+            if ('IntersectionObserver' in window) {
+                const imageObserver = new IntersectionObserver((entries, observer) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            const img = entry.target;
+                            img.classList.add('loaded');
+                            observer.unobserve(img);
+                        }
+                    });
+                });
+
+                lazyImages.forEach(img => {
+                    imageObserver.observe(img);
+                });
+            }
+
+            // Touch-friendly enhancements
+            if ('ontouchstart' in window) {
+                // Add touch feedback to interactive elements
+                const touchElements = document.querySelectorAll('a, button, .game-link, .rike-game-item');
+                touchElements.forEach(element => {
+                    element.addEventListener('touchstart', function() {
+                        this.style.transform = 'scale(0.98)';
+                    });
+
+                    element.addEventListener('touchend', function() {
+                        this.style.transform = '';
+                    });
+                });
+            }
+
+            // Prevent double-tap zoom on interactive elements
+            let lastTouchEnd = 0;
+            document.addEventListener('touchend', function(event) {
+                const now = Date.now();
+                if (now - lastTouchEnd <= 300) {
+                    event.preventDefault();
+                }
+                lastTouchEnd = now;
+            }, false);
+        });
+
         // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -1298,21 +1896,19 @@
         });
 
         // Track game link clicks for analytics
-        document.addEventListener('DOMContentLoaded', function() {
-            const gameLink = document.querySelector('.game-link');
-            if (gameLink) {
-                gameLink.addEventListener('click', function() {
-                    // Analytics tracking for game link click
-                    if (typeof gtag !== 'undefined') {
-                        gtag('event', 'click', {
-                            event_category: 'engagement',
-                            event_label: 'play_game_link',
-                            value: 1
-                        });
-                    }
-                });
-            }
-        });
+        const gameLink = document.querySelector('.game-link');
+        if (gameLink) {
+            gameLink.addEventListener('click', function() {
+                // Analytics tracking for game link click
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'click', {
+                        event_category: 'engagement',
+                        event_label: 'play_game_link',
+                        value: 1
+                    });
+                }
+            });
+        }
 
         // Analytics placeholder (replace with your analytics code)
         if (typeof gtag !== 'undefined') {

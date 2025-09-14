@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
+  <!-- Water drop background -->
+  <circle cx="16" cy="16" r="14" fill="#2196F3"/>
+
+  <!-- Fire shape -->
+  <path d="M16 8 C14 8, 12 10, 12 12 C12 14, 13 15, 14 15 C13 16, 12 18, 12 20 C12 22, 14 24, 16 24 C18 24, 20 22, 20 20 C20 18, 19 16, 18 15 C19 15, 20 14, 20 12 C20 10, 18 8, 16 8 Z" fill="#FF5722" opacity="0.9"/>
+
+  <!-- Water splash effect -->
+  <circle cx="10" cy="20" r="2" fill="#64B5F6" opacity="0.7"/>
+  <circle cx="22" cy="18" r="1.5" fill="#64B5F6" opacity="0.7"/>
+  <circle cx="18" cy="24" r="1" fill="#64B5F6" opacity="0.7"/>
+</svg>

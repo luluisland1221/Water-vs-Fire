@@ -8,6 +8,14 @@
         <priority>1.0</priority>
     </url>
 
+    <!-- 游戏攻略页面 - 高优先级 -->
+    <url>
+        <loc>https://watervsfire.com/guide</loc>
+        <lastmod>2025-09-14</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
     <!-- 隐私政策页面 -->
     <url>
         <loc>https://watervsfire.com/privacy</loc>
