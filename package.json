@@ -1,0 +1,19 @@
+{
+  "name": "crazygames-scraper",
+  "version": "1.0.0",
+  "description": "CrazyGames Casual Games Scraper",
+  "main": "node_scraper.js",
+  "scripts": {
+    "start": "node node_scraper.js",
+    "scrape": "node node_scraper.js"
+  },
+  "dependencies": {
+    "axios": "^1.6.0",
+    "cheerio": "^1.0.0-rc.12"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "author": "Your Name",
+  "license": "MIT"
+}

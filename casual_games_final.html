@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CrazyGames Casual Games Collection</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            color: white;
+        }
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        .games-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .game-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        .game-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+        }
+        .game-image {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            background: linear-gradient(45deg, #f0f0f0, #e0e0e0);
+        }
+        .game-info {
+            padding: 20px;
+        }
+        .game-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #333;
+            line-height: 1.3;
+        }
+        .game-description {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+        .game-badges {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+        }
+        .badge {
+            background: #e3f2fd;
+            color: #1976d2;
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 11px;
+            font-weight: 500;
+        }
+        .badge.mobile {
+            background: #e8f5e8;
+            color: #2e7d32;
+        }
+        .play-button {
+            display: inline-block;
+            background: linear-gradient(45deg, #ff6b6b, #ff8e53);
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 25px;
+            font-size: 14px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+        }
+        .play-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 107, 107, 0.4);
+        }
+        .stats {
+            text-align: center;
+            margin-top: 30px;
+            color: white;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🎮 CrazyGames Casual Games Collection</h1>
+        <p>Found 30 amazing casual games</p>
+        <p>Scraped on: 2025/9/14 22:31:23</p>
+    </div>
+    <div class="games-grid">
+
+        <div class="game-card">
+            <img src="https://imgs.crazygames.com/steal-brainrot-online_16x9/20250811053358/steal-brainrot-online_16x9-cover?width=300&height=200&crop=true" alt="Steal Brainrot Online" class="game-image" onerror="this.src='https://via.placeholder.com/280x180?text=No+Image'">
+            <div class="game-info">
+                <div class="game-title">Steal Brainrot Online</div>
+                <div class="game-description">Steal Brainrot Online - Play online for free on CrazyGames</div>
+                <div class="game-badges">
+                    <span class="badge">Casual</span>
+                    <span class="badge mobile">📱 Mobile Friendly</span>
+                    <span class="badge mobile">🤖 Android</span>
+                    <span class="badge mobile">🍎 iOS</span>
+                </div>
+                <a href="https://www.crazygames.com/game/steal-brainrot-online" target="_blank" class="play-button">▶ Play Now</a>
+            </div>
+        </div>
+
+        <div class="game-card">
+            <img src="https://imgs.crazygames.com/space-waves_16x9/20241203031650/space-waves_16x9-cover?width=300&height=200&crop=true" alt="Space Waves" class="game-image" onerror="this.src='https://via.placeholder.com/280x180?text=No+Image'">
+            <div class="game-info">
+                <div class="game-title">Space Waves</div>
+                <div class="game-description">Space Waves - Play online for free on CrazyGames</div>
+                <div class="game-badges">
+                    <span class="badge">Casual</span>
+                    <span class="badge mobile">📱 Mobile Friendly</span>
+                    <span class="badge mobile">🤖 Android</span>
+                    <span class="badge mobile">🍎 iOS</span>
+                </div>
+                <a href="https://www.crazygames.com/game/space-waves" target="_blank" class="play-button">▶ Play Now</a>
+            </div>
+        </div>
+
+        <div class="game-card">
+            <img src="https://imgs.crazygames.com/ragdoll-archers_16x9/20250711092019/ragdoll-archers_16x9-cover?width=300&height=200&crop=true" alt="Ragdoll Archers" class="game-image" onerror="this.src='https://via.placeholder.com/280x180?text=No+Image'">
+            <div class="game-info">
+                <div class="game-title">Ragdoll Archers</div>
+                <div class="game-description">Ragdoll Archers - Play online for free on CrazyGames</div>
+                <div class="game-badges">
+                    <span class="badge">Casual</span>
+                    <span class="badge mobile">📱 Mobile Friendly</span>
+                    <span class="badge mobile">🤖 Android</span>
+                    <span class="badge mobile">🍎 iOS</span>
+                </div>
+                <a href="https://www.crazygames.com/game/ragdoll-archers" target="_blank" class="play-button">▶ Play Now</a>
+            </div>
+        </div>
+
+        <div class="game-card">
+            <img src="https://imgs.crazygames.com/count-masters-stickman-games_16x9/20250220041115/count-masters-stickman-games_16x9-cover?width=300&height=200&crop=true" alt="Count Masters: Stickman Games" class="game-image" onerror="this.src='https://via.placeholder.com/280x180?text=No+Image'">
+            <div class="game-info">
+                <div class="game-title">Count Masters: Stickman Games</div>
+                <div class="game-description">Count Masters: Stickman Games - Play online for free on CrazyGames</div>
+                <div class="game-badges">
+                    <span class="badge">Casual</span>
+                    <span class="badge mobile">📱 Mobile Friendly</span>
+                    <span class="badge mobile">🤖 Android</span>
+                    <span class="badge mobile">🍎 iOS</span>
+                </div>
+                <a href="https://www.crazygames.com/game/count-masters-stickman-games" target="_blank" class="play-button">▶ Play Now</a>
+            </div>
+        </div>
+
+        <div class="game-card">
+            <img src="https://imgs.crazygames.com/slice-master_16x9/20240731033229/slice-master_16x9-cover?width=300&height=200&crop=true" alt="Slice Master" class="game-image" onerror="this.src='https://via.placeholder.com/280x180?text=No+Image'">
+            <div class="game-info">
+                <div class="game-title">Slice Master</div>
+                <div class="game-description">Slice Master - Play online for free on CrazyGames</div>
+                <div class="game-badges">
+                    <span class="badge">Casual</span>
+                    <span class="badge mobile">📱 Mobile Friendly</span>
+                    <span class="badge mobile">🤖 Android</span>
+                    <span class="badge mobile">🍎 iOS</span>
+                </div>
+                <a href="https://www.crazygames.com/game/slice-master" target="_blank" class="play-button">▶ Play Now</a>
+            </div>
+        </div>
+
+        <div class="game-card">
+            <img src="https://imgs.crazygames.com/worldguessr_16x9/20241018082520/worldguessr_16x9-cover?width=300&height=200&crop=true" alt="WorldGuessr Free GeoGuessr" class="game-image" onerror="this.src='https://via.placeholder.com/280x180?text=No+Image'">
+            <div class="game-info">
+                <div class="game-title">WorldGuessr Free GeoGuessr</div>
+                <div class="game-description">WorldGuessr Free GeoGuessr - Play online for free on CrazyGames</div>
+                <div class="game-badges">
+                    <span class="badge">Casual</span>
+                    <span class="badge mobile">📱 Mobile Friendly</span>
+                    <span class="badge mobile">🤖 Android</span>
+                    <span class="badge mobile">🍎 iOS</span>
+                </div>
+                <a href="https://www.crazygames.com/game/worldguessr" target="_blank" class="play-button">▶ Play Now</a>
+            </div>
+        </div>
+
+        <div class="game-card">
+            <img src="https://imgs.crazygames.com/zoo---happy-animals_16x9/20240408055424/zoo---happy-animals_16x9-cover?width=300&height=200&crop=true" alt="Zoo - Happy Animals" class="game-image" onerror="this.src='https://via.placeholder.com/280x180?text=No+Image'">
+            <div class="game-info">
+                <div class="game-title">Zoo - Happy Animals</div>
+                <div class="game-description">Zoo - Happy Animals - Play online for free on CrazyGames</div>
+                <div class="game-badges">
+                    <span class="badge">Casual</span>
+                    <span class="badge mobile">📱 Mobile Friendly</span>
+                    <span class="badge mobile">🤖 Android</span>
+                    <span class="badge mobile">🍎 iOS</span>
+                </div>
+                <a href="https://www.crazygames.com/game/zoo---happy-animals" target="_blank" class="play-button">▶ Play Now</a>
+            </div>
+        </div>
+
+        <div class="game-card">
+            <img src="https://imgs.crazygames.com/stone-grass-mowing-simulator_16x9/20250410062107/stone-grass-mowing-simulator_16x9-cover?width=300&height=200&crop=true" alt="Stone Grass: Mowing Simulator" class="game-image" onerror="this.src='https://via.placeholder.com/280x180?text=No+Image'">
+            <div class="game-info">
+                <div class="game-title">Stone Grass: Mowing Simulator</div>
+                <div class="game-description">Stone Grass: Mowing Simulator - Play online for free on CrazyGames</div>
+                <div class="game-badges">
+                    <span class="badge">Casual</span>
+                    <span class="badge mobile">📱 Mobile Friendly</span>
+                    <span class="badge mobile">🤖 Android</span>
+                    <span class="badge mobile">🍎 iOS</span>
+                </div>
+                <a href="https://www.crazygames.com/game/stone-grass-mowing-simulator" target="_blank" class="play-button">▶ Play Now</a>
+            </div>
+        </div>
+
+        <div class="game-card">
+            <img src="https://imgs.crazygames.com/fish-orbit_16x9/20250808035910/fish-orbit_16x9-cover?width=300&height=200&crop=true" alt="Fish Orbit" class="game-image" onerror="this.src='https://via.placeholder.com/280x180?text=No+Image'">
+            <div class="game-info">
+                <div class="game-title">Fish Orbit</div>
+                <div class="game-description">Fish Orbit - Play online for free on CrazyGames</div>
+                <div class="game-badges">
+                    <span class="badge">Casual</span>
+                    <span class="badge mobile">📱 Mobile Friendly</span>
+                    <span class="badge mobile">🤖 Android</span>
+                    <span class="badge mobile">🍎 iOS</span>
+                </div>
+                <a href="https://www.crazygames.com/game/fish-orbit" target="_blank" class="play-button">▶ Play Now</a>
+            </div>
+        </div>
+
+        <div class="game-card">
+            <img src="https://imgs.crazygames.com/bridge-race_16x9/20241227062023/bridge-race_16x9-cover?width=300&height=200&crop=true" alt="Bridge Race" class="game-image" onerror="this.src='https://via.placeholder.com/280x180?text=No+Image'">
+            <div class="game-info">
+                <div class="game-title">Bridge Race</div>
+                <div class="game-description">Bridge Race - Play online for free on CrazyGames</div>
+                <div class="game-badges">
+                    <span class="badge">Casual</span>
+                    <span class="badge mobile">📱 Mobile Friendly</span>
+                    <span class="badge mobile">🤖 Android</span>
+                    <span class="badge mobile">🍎 iOS</span>
+                </div>
+                <a href="https://www.crazygames.com/game/bridge-race" target="_blank" class="play-button">▶ Play Now</a>
+            </div>
+        </div>
+
+        <div class="game-card">
+            <img src="https://imgs.crazygames.com/obby-world-squid-escape_16x9/20250804143608/obby-world-squid-escape_16x9-cover?width=300&height=200&crop=true" alt="Obby World: Squid Escape" class="game-image" onerror="this.src='https://via.placeholder.com/280x180?text=No+Image'">
+            <div class="game-info">
+                <div class="game-title">Obby World: Squid Escape</div>
+                <div class="game-description">Obby World: Squid Escape - Play online for free on CrazyGames</div>
+                <div class="game-badges">
+                    <span class="badge">Casual</span>
+                    <span class="badge mobile">📱 Mobile Friendly</span>
+                    <span class="badge mobile">🤖 Android</span>
+                    <span class="badge mobile">🍎 iOS</span>
+                </div>
+                <a href="https://www.crazygames.com/game/obby-world-squid-escape" target="_blank" class="play-button">▶ Play Now</a>
+            </div>
+        </div>
+
+        <div class="game-card">
+            <img src="https://imgs.crazygames.com/night-club-security_16x9/20250829035049/night-club-security_16x9-cover?width=300&height=200&crop=true" alt="Night Club Security" class="game-image" onerror="this.src='https://via.placeholder.com/280x180?text=No+Image'">
+            <div class="game-info">
+                <div class="game-title">Night Club Security</div>
+                <div class="game-description">Night Club Security - Play online for free on CrazyGames</div>
+                <div class="game-badges">
+                    <span class="badge">Casual</span>
+                    <span class="badge mobile">📱 Mobile Friendly</span>
+                    <span class="badge mobile">🤖 Android</span>
+                    
+                </div>
+                <a href="https://www.crazygames.com/game/night-club-security" target="_blank" class="play-button">▶ Play Now</a>
+            </div>
+        </div>
+
+        <div class="game-card">
+            <img src="https://imgs.crazygames.com/crazy-office-slap-and-smash_16x9/20250425071328/crazy-office-slap-and-smash_16x9-cover?width=300&height=200&crop=true" alt="Crazy Office: Slap and Smash!" class="game-image" onerror="this.src='https://via.placeholder.com/280x180?text=No+Image'">
+            <div class="game-info">
+                <div class="game-title">Crazy Office: Slap and Smash!</div>
+                <div class="game-description">Crazy Office: Slap and Smash! - Play online for free on CrazyGames</div>
+                <div class="game-badges">
+                    <span class="badge">Casual</span>
+                    <span class="badge mobile">📱 Mobile Friendly</span>
+                    <span class="badge mobile">🤖 Android</span>
+                    <span class="badge mobile">🍎 iOS</span>
+                </div>
+                <a href="https://www.crazygames.com/game/crazy-office-slap-and-smash" target="_blank" class="play-button">▶ Play Now</a>
+            </div>
+        </div>
+
+        <div class="game-card">
+            <img src="https://imgs.crazygames.com/bad-cat---granny-s-return_16x9/20250409102849/bad-cat---granny-s-return_16x9-cover?width=300&height=200&crop=true" alt="Bad Cat - Granny's Return" class="game-image" onerror="this.src='https://via.placeholder.com/280x180?text=No+Image'">
+            <div class="game-info">
+                <div class="game-title">Bad Cat - Granny's Return</div>
+                <div class="game-description">Bad Cat - Granny's Return - Play online for free on CrazyGames</div>
+                <div class="game-badges">
+                    <span class="badge">Casual</span>
+                    <span class="badge mobile">📱 Mobile Friendly</span>
+                    <span class="badge mobile">🤖 Android</span>
+                    
+                </div>
+                <a href="https://www.crazygames.com/game/bad-cat---granny-s-return" target="_blank" class="play-button">▶ Play Now</a>
+            </div>
+        </div>
+
+        <div class="game-card">
+            <img src="https://imgs.crazygames.com/designville-merge-design_16x9/20250828063817/designville-merge-design_16x9-cover?width=300&height=200&crop=true" alt="Designville: Merge & Design" class="game-image" onerror="this.src='https://via.placeholder.com/280x180?text=No+Image'">
+            <div class="game-info">
+                <div class="game-title">Designville: Merge & Design</div>
+                <div class="game-description">Designville: Merge & Design - Play online for free on CrazyGames</div>
+                <div class="game-badges">
+                    <span class="badge">Casual</span>
+                    <span class="badge mobile">📱 Mobile Friendly</span>
+                    <span class="badge mobile">🤖 Android</span>
+                    <span class="badge mobile">🍎 iOS</span>
+                </div>
+                <a href="https://www.crazygames.com/game/designville-merge-design" target="_blank" class="play-button">▶ Play Now</a>
+            </div>
+        </div>
+
+        <div class="game-card">
+            <img src="https://imgs.crazygames.com/tile-journey_16x9/20231107045402/tile-journey_16x9-cover?width=300&height=200&crop=true" alt="Tile Journey" class="game-image" onerror="this.src='https://via.placeholder.com/280x180?text=No+Image'">
+            <div class="game-info">
+                <div class="game-title">Tile Journey</div>
+                <div class="game-description">Tile Journey - Play online for free on CrazyGames</div>
+                <div class="game-badges">
+                    <span class="badge">Casual</span>
+                    <span class="badge mobile">📱 Mobile Friendly</span>
+                    <span class="badge mobile">🤖 Android</span>
+                    <span class="badge mobile">🍎 iOS</span>
+                </div>
+                <a href="https://www.crazygames.com/game/tile-journey" target="_blank" class="play-button">▶ Play Now</a>
+            </div>
+        </div>
+
+        <div class="game-card">
+            <img src="https://imgs.crazygames.com/games/arkadium-s-bubble-shooter/cover_16x9-1722870856323.png?width=300&height=200&crop=true" alt="Arkadium's Bubble Shooter" class="game-image" onerror="this.src='https://via.placeholder.com/280x180?text=No+Image'">
+            <div class="game-info">
+                <div class="game-title">Arkadium's Bubble Shooter</div>
+                <div class="game-description">Arkadium's Bubble Shooter - Play online for free on CrazyGames</div>
+                <div class="game-badges">
+                    <span class="badge">Casual</span>
+                    <span class="badge mobile">📱 Mobile Friendly</span>
+                    <span class="badge mobile">🤖 Android</span>
+                    <span class="badge mobile">🍎 iOS</span>
+                </div>
+                <a href="https://www.crazygames.com/game/arkadium-s-bubble-shooter" target="_blank" class="play-button">▶ Play Now</a>
+            </div>
+        </div>
+
+        <div class="game-card">
+            <img src="https://imgs.crazygames.com/jewel-academy_16x9/20240927093412/jewel-academy_16x9-cover?width=300&height=200&crop=true" alt="Jewel Academy" class="game-image" onerror="this.src='https://via.placeholder.com/280x180?text=No+Image'">
+            <div class="game-info">
+                <div class="game-title">Jewel Academy</div>
+                <div class="game-description">Jewel Academy - Play online for free on CrazyGames</div>
+                <div class="game-badges">
+                    <span class="badge">Casual</span>
+                    <span class="badge mobile">📱 Mobile Friendly</span>
+                    <span class="badge mobile">🤖 Android</span>
+                    <span class="badge mobile">🍎 iOS</span>
+                </div>
+                <a href="https://www.crazygames.com/game/jewel-academy" target="_blank" class="play-button">▶ Play Now</a>
+            </div>
+        </div>
+
+        <div class="game-card">
+            <img src="https://imgs.crazygames.com/games/bubble-pop-classic/cover_16x9-1709216664309.png?width=300&height=200&crop=true" alt="Bubble Pop Classic" class="game-image" onerror="this.src='https://via.placeholder.com/280x180?text=No+Image'">
+            <div class="game-info">
+                <div class="game-title">Bubble Pop Classic</div>
+                <div class="game-description">Bubble Pop Classic - Play online for free on CrazyGames</div>
+                <div class="game-badges">
+                    <span class="badge">Casual</span>
+                    <span class="badge mobile">📱 Mobile Friendly</span>
+                    <span class="badge mobile">🤖 Android</span>
+                    <span class="badge mobile">🍎 iOS</span>
+                </div>
+                <a href="https://www.crazygames.com/game/bubble-pop-classic" target="_blank" class="play-button">▶ Play Now</a>
+            </div>
+        </div>
+
+        <div class="game-card">
+            <img src="https://imgs.crazygames.com/games/the-waitress/cover-1634570674724.png?width=300&height=200&crop=true" alt="The Waitress" class="game-image" onerror="this.src='https://via.placeholder.com/280x180?text=No+Image'">
+            <div class="game-info">
+                <div class="game-title">The Waitress</div>
+                <div class="game-description">The Waitress - Play online for free on CrazyGames</div>
+                <div class="game-badges">
+                    <span class="badge">Casual</span>
+                    <span class="badge mobile">📱 Mobile Friendly</span>
+                    <span class="badge mobile">🤖 Android</span>
+                    <span class="badge mobile">🍎 iOS</span>
+                </div>
+                <a href="https://www.crazygames.com/game/the-waitress" target="_blank" class="play-button">▶ Play Now</a>
+            </div>
+        </div>
+
+        <div class="game-card">
+            <img src="https://imgs.crazygames.com/fruit-merge-juicy-drop-game-nyf_16x9/20250108085620/fruit-merge-juicy-drop-game-nyf_16x9-cover?width=300&height=200&crop=true" alt="Fruit Merge: Juicy Drop Game" class="game-image" onerror="this.src='https://via.placeholder.com/280x180?text=No+Image'">
+            <div class="game-info">
+                <div class="game-title">Fruit Merge: Juicy Drop Game</div>
+                <div class="game-description">Fruit Merge: Juicy Drop Game - Play online for free on CrazyGames</div>
+                <div class="game-badges">
+                    <span class="badge">Casual</span>
+                    <span class="badge mobile">📱 Mobile Friendly</span>
+                    <span class="badge mobile">🤖 Android</span>
+                    
+                </div>
+                <a href="https://www.crazygames.com/game/fruit-merge-juicy-drop-game-nyf" target="_blank" class="play-button">▶ Play Now</a>
+            </div>
+        </div>
+
+        <div class="game-card">
+            <img src="https://imgs.crazygames.com/pepi-house-happy-family_16x9/20241106063304/pepi-house-happy-family_16x9-cover?width=300&height=200&crop=true" alt="Pepi House: Happy Family" class="game-image" onerror="this.src='https://via.placeholder.com/280x180?text=No+Image'">
+            <div class="game-info">
+                <div class="game-title">Pepi House: Happy Family</div>
+                <div class="game-description">Pepi House: Happy Family - Play online for free on CrazyGames</div>
+                <div class="game-badges">
+                    <span class="badge">Casual</span>
+                    <span class="badge mobile">📱 Mobile Friendly</span>
+                    <span class="badge mobile">🤖 Android</span>
+                    <span class="badge mobile">🍎 iOS</span>
+                </div>
+                <a href="https://www.crazygames.com/game/pepi-house-happy-family" target="_blank" class="play-button">▶ Play Now</a>
+            </div>
+        </div>
+
+        <div class="game-card">
+            <img src="https://imgs.crazygames.com/games/sprunki-itn/cover_16x9-1732009692724.png?width=300&height=200&crop=true" alt="Sprunki" class="game-image" onerror="this.src='https://via.placeholder.com/280x180?text=No+Image'">
+            <div class="game-info">
+                <div class="game-title">Sprunki</div>
+                <div class="game-description">Sprunki - Play online for free on CrazyGames</div>
+                <div class="game-badges">
+                    <span class="badge">Casual</span>
+                    <span class="badge mobile">📱 Mobile Friendly</span>
+                    <span class="badge mobile">🤖 Android</span>
+                    <span class="badge mobile">🍎 iOS</span>
+                </div>
+                <a href="https://www.crazygames.com/game/sprunki-itn" target="_blank" class="play-button">▶ Play Now</a>
+            </div>
+        </div>
+
+        <div class="game-card">
+            <img src="https://imgs.crazygames.com/games/geometry-dash-online/cover_16x9-1732744370399.png?width=300&height=200&crop=true" alt="Geometry Game" class="game-image" onerror="this.src='https://via.placeholder.com/280x180?text=No+Image'">
+            <div class="game-info">
+                <div class="game-title">Geometry Game</div>
+                <div class="game-description">Geometry Game - Play online for free on CrazyGames</div>
+                <div class="game-badges">
+                    <span class="badge">Casual</span>
+                    <span class="badge mobile">📱 Mobile Friendly</span>
+                    <span class="badge mobile">🤖 Android</span>
+                    <span class="badge mobile">🍎 iOS</span>
+                </div>
+                <a href="https://www.crazygames.com/game/geometry-dash-online" target="_blank" class="play-button">▶ Play Now</a>
+            </div>
+        </div>
+
+        <div class="game-card">
+            <img src="https://imgs.crazygames.com/snow-rider-3d_16x9/20250418071429/snow-rider-3d_16x9-cover?width=300&height=200&crop=true" alt="Snow Rider 3D" class="game-image" onerror="this.src='https://via.placeholder.com/280x180?text=No+Image'">
+            <div class="game-info">
+                <div class="game-title">Snow Rider 3D</div>
+                <div class="game-description">Snow Rider 3D - Play online for free on CrazyGames</div>
+                <div class="game-badges">
+                    <span class="badge">Casual</span>
+                    
+                    
+                    
+                </div>
+                <a href="https://www.crazygames.com/game/snow-rider-3d" target="_blank" class="play-button">▶ Play Now</a>
+            </div>
+        </div>
+
+        <div class="game-card">
+            <img src="https://imgs.crazygames.com/games/bubble-shooter-classic/cover-1643212218101.png?width=300&height=200&crop=true" alt="Bubble Shooter" class="game-image" onerror="this.src='https://via.placeholder.com/280x180?text=No+Image'">
+            <div class="game-info">
+                <div class="game-title">Bubble Shooter</div>
+                <div class="game-description">Bubble Shooter - Play online for free on CrazyGames</div>
+                <div class="game-badges">
+                    <span class="badge">Casual</span>
+                    <span class="badge mobile">📱 Mobile Friendly</span>
+                    <span class="badge mobile">🤖 Android</span>
+                    <span class="badge mobile">🍎 iOS</span>
+                </div>
+                <a href="https://www.crazygames.com/game/bubble-shooter-classic" target="_blank" class="play-button">▶ Play Now</a>
+            </div>
+        </div>
+
+        <div class="game-card">
+            <img src="https://imgs.crazygames.com/eggy-car/20230720050147/eggy-car-cover?width=300&height=200&crop=true" alt="Eggy Car" class="game-image" onerror="this.src='https://via.placeholder.com/280x180?text=No+Image'">
+            <div class="game-info">
+                <div class="game-title">Eggy Car</div>
+                <div class="game-description">Eggy Car - Play online for free on CrazyGames</div>
+                <div class="game-badges">
+                    <span class="badge">Casual</span>
+                    <span class="badge mobile">📱 Mobile Friendly</span>
+                    <span class="badge mobile">🤖 Android</span>
+                    <span class="badge mobile">🍎 iOS</span>
+                </div>
+                <a href="https://www.crazygames.com/game/eggy-car" target="_blank" class="play-button">▶ Play Now</a>
+            </div>
+        </div>
+
+        <div class="game-card">
+            <img src="https://imgs.crazygames.com/little-alchemy-2/20230130142219/little-alchemy-2-cover?width=300&height=200&crop=true" alt="Little Alchemy 2" class="game-image" onerror="this.src='https://via.placeholder.com/280x180?text=No+Image'">
+            <div class="game-info">
+                <div class="game-title">Little Alchemy 2</div>
+                <div class="game-description">Little Alchemy 2 - Play online for free on CrazyGames</div>
+                <div class="game-badges">
+                    <span class="badge">Casual</span>
+                    <span class="badge mobile">📱 Mobile Friendly</span>
+                    <span class="badge mobile">🤖 Android</span>
+                    <span class="badge mobile">🍎 iOS</span>
+                </div>
+                <a href="https://www.crazygames.com/game/little-alchemy-2" target="_blank" class="play-button">▶ Play Now</a>
+            </div>
+        </div>
+
+        <div class="game-card">
+            <img src="https://imgs.crazygames.com/games/little-alchemy/cover-1655828649117.png?width=300&height=200&crop=true" alt="Little Alchemy" class="game-image" onerror="this.src='https://via.placeholder.com/280x180?text=No+Image'">
+            <div class="game-info">
+                <div class="game-title">Little Alchemy</div>
+                <div class="game-description">Little Alchemy - Play online for free on CrazyGames</div>
+                <div class="game-badges">
+                    <span class="badge">Casual</span>
+                    <span class="badge mobile">📱 Mobile Friendly</span>
+                    <span class="badge mobile">🤖 Android</span>
+                    <span class="badge mobile">🍎 iOS</span>
+                </div>
+                <a href="https://www.crazygames.com/game/little-alchemy" target="_blank" class="play-button">▶ Play Now</a>
+            </div>
+        </div>
+
+        <div class="game-card">
+            <img src="https://imgs.crazygames.com/games/friday-night-funkin/cover-1614085803807.png?width=300&height=200&crop=true" alt="Friday Night Funkin'" class="game-image" onerror="this.src='https://via.placeholder.com/280x180?text=No+Image'">
+            <div class="game-info">
+                <div class="game-title">Friday Night Funkin'</div>
+                <div class="game-description">Friday Night Funkin' - Play online for free on CrazyGames</div>
+                <div class="game-badges">
+                    <span class="badge">Casual</span>
+                    
+                    
+                    
+                </div>
+                <a href="https://www.crazygames.com/game/friday-night-funkin" target="_blank" class="play-button">▶ Play Now</a>
+            </div>
+        </div>
+
+    </div>
+    <div class="stats">
+        <p>Total games: 30 | Mobile friendly: 28 |
+           Android supported: 28 |
+           iOS supported: 25</p>
+    </div>
+</body>
+</html>

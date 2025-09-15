@@ -69,7 +69,7 @@
 
     <!-- Resource Hints -->
     <link rel="preload" href="WaterVsFire.png" as="image" importance="high">
-    <link rel="preload" href="game-icon.webp" as="image" importance="high">
+    <link rel="preload" href="wvf.png" as="image" importance="high">
     
     <!-- Google AdSense -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6031811659039199"
@@ -89,7 +89,7 @@
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
-        "@type": "Game",
+        "@type": "VideoGame",
         "name": "Water vs Fire",
         "alternateName": "Water vs Fire Game",
         "description": "Play Water vs Fire online free! The ultimate fire fighting action game where you control water to extinguish flames, collect coins, and upgrade your firefighter abilities.",
@@ -115,16 +115,13 @@
             "name": "Rike Games",
             "url": "https://www.crazygames.com/developer/rike-games"
         },
-        "gameItem": {
-            "@type": "Thing",
-            "name": "Water vs Fire Game",
-            "description": "Free online fire fighting action game with water spraying mechanics"
-        },
-        "numberOfPlayers": {
+            "numberOfPlayers": {
             "@type": "QuantitativeValue",
             "value": "1"
         },
-        "typicalAgeRange": "8+"
+        "gamePlayMode": "SinglePlayer",
+        "interactionType": ["Keyboard", "Mouse", "Touch"],
+        "typicalAgeRange": "3+"
     }
     </script>
 
@@ -143,7 +140,15 @@
             "query-input": "required name=search_term_string"
         },
         "inLanguage": "en",
-        "isAccessibleForFree": true
+        "isAccessibleForFree": true,
+        "publisher": {
+            "@type": "Organization",
+            "name": "Water vs Fire Game"
+        },
+        "author": {
+            "@type": "Organization",
+            "name": "Water vs Fire Game"
+        }
     }
     </script>
     
@@ -221,6 +226,9 @@
             color: #1976D2;
             text-decoration: none;
             transition: color 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.2rem;
         }
 
         .logo:hover {
@@ -394,6 +402,7 @@
             font-size: 1rem;
         }
 
+  
         /* Features Section */
         .features {
             background: rgba(255, 255, 255, 0.1);
@@ -429,7 +438,7 @@
 
         .game-details-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: repeat(3, 1fr);
             gap: 1.5rem;
         }
 
@@ -440,6 +449,10 @@
             padding: 1rem;
             background: rgba(33, 150, 243, 0.1);
             border-radius: 12px;
+        }
+
+        .platforms-item {
+            grid-column: span 2;
         }
 
         .detail-icon {
@@ -631,10 +644,10 @@
         }
 
         .developer-logo {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            object-fit: cover;
+            width: 100px;
+            height: 75px;
+            border-radius: 12px;
+            object-fit: contain;
         }
 
         .developer-text h4 {
@@ -1009,6 +1022,7 @@
                 font-size: 1.5rem;
             }
 
+    
             /* Hero Section */
             .hero h1 {
                 font-size: clamp(1.8rem, 5vw, 2.5rem);
@@ -1048,6 +1062,10 @@
                 gap: 1rem;
             }
 
+            .platforms-item {
+                grid-column: span 1;
+            }
+
             /* Controls */
             .controls-content {
                 grid-template-columns: repeat(2, 1fr);
@@ -1081,7 +1099,7 @@
             }
 
             .developer-logo {
-                width: 60px;
+                width: 80px;
                 height: 60px;
             }
 
@@ -1194,6 +1212,7 @@
                 font-size: 0.9rem;
             }
 
+  
             /* Controls */
             .controls-content {
                 grid-template-columns: 1fr;
@@ -1304,10 +1323,6 @@
             }
 
             .overview-image img,
-            .developer-logo {
-                border-radius: 8px;
-            }
-
             .screenshot-item img,
             .related-game-item img {
                 border-radius: 8px;
@@ -1377,22 +1392,386 @@
             outline: 2px solid #1976D2;
             outline-offset: 2px;
         }
+
+        /* Enhanced Game Guide Styles */
+        .game-guide-section {
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .game-guide-section h4 {
+            color: #1976D2;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .strategy-content,
+        .tips-content {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .strategy-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            padding: 0.75rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+            border-left: 3px solid #1976D2;
+        }
+
+        .strategy-icon {
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .strategy-text {
+            flex: 1;
+            line-height: 1.5;
+        }
+
+        .strategy-text strong {
+            color: #1976D2;
+            font-weight: 600;
+        }
+
+        .tip-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.5rem;
+            background: rgba(33, 150, 243, 0.1);
+            border-radius: 6px;
+        }
+
+        .tip-bullet {
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+
+        .tip-item span:last-child {
+            line-height: 1.4;
+        }
+
+        /* Mobile Responsive for Game Guide */
+        @media (max-width: 768px) {
+            .game-guide-section {
+                padding: 1rem;
+                margin-bottom: 1.5rem;
+            }
+
+            .strategy-item {
+                flex-direction: column;
+                text-align: center;
+                gap: 0.5rem;
+            }
+
+            .tip-item {
+                flex-direction: column;
+                text-align: center;
+                gap: 0.5rem;
+            }
+        }
+
+        /* User Information Section Styles */
+        .user-info-section {
+            margin: 3rem 0;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .user-info-section h3 {
+            color: #1976D2;
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 1.8rem;
+            font-weight: 600;
+        }
+
+        .info-block {
+            margin-bottom: 2rem;
+        }
+
+        .info-block:last-child {
+            margin-bottom: 0;
+        }
+
+        .info-block h4 {
+            color: #1976D2;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .info-content,
+        .faq-content {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 10px;
+            border-left: 4px solid #1976D2;
+            transition: all 0.3s ease;
+        }
+
+        .info-item:hover {
+            background: rgba(255, 255, 255, 0.08);
+            transform: translateX(5px);
+        }
+
+        .info-icon {
+            font-size: 1.5rem;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .info-text {
+            flex: 1;
+            line-height: 1.6;
+        }
+
+        .info-text strong {
+            color: #1976D2;
+            font-weight: 600;
+        }
+
+        .faq-item {
+            padding: 1rem;
+            background: rgba(33, 150, 243, 0.05);
+            border-radius: 8px;
+            border-left: 3px solid #FFC107;
+        }
+
+        .faq-question {
+            font-weight: 600;
+            color: #1976D2;
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+        }
+
+        .faq-answer {
+            color: #b0b0b0;
+            line-height: 1.5;
+        }
+
+        /* Mobile Responsive for User Info */
+        @media (max-width: 768px) {
+            .user-info-section {
+                padding: 1.5rem;
+                margin: 2rem 0;
+            }
+
+            .user-info-section h3 {
+                font-size: 1.5rem;
+                margin-bottom: 1.5rem;
+            }
+
+            .info-block h4 {
+                font-size: 1.1rem;
+            }
+
+            .info-item {
+                flex-direction: column;
+                text-align: center;
+                gap: 0.5rem;
+                padding: 0.75rem;
+            }
+
+            .info-item:hover {
+                transform: none;
+            }
+        }
+
+        /* Cookie Consent Banner Styles */
+        .cookie-banner {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            border-top: 1px solid #e0e0e0;
+            box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.15);
+            z-index: 10000;
+            transform: translateY(100%);
+            transition: transform 0.3s ease-in-out;
+            padding: 1rem 0;
+        }
+
+        .cookie-banner.show {
+            transform: translateY(0);
+        }
+
+        .cookie-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 2rem;
+        }
+
+        .cookie-text {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .cookie-text h4 {
+            margin: 0 0 0.5rem 0;
+            color: #1976D2;
+            font-size: 1rem;
+            font-weight: 600;
+        }
+
+        .cookie-text p {
+            margin: 0;
+            color: #4a5568;
+            font-size: 0.875rem;
+            line-height: 1.4;
+        }
+
+        .cookie-buttons {
+            display: flex;
+            gap: 0.75rem;
+            flex-shrink: 0;
+        }
+
+        .cookie-btn {
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 6px;
+            font-size: 0.875rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            white-space: nowrap;
+        }
+
+        .accept-btn {
+            background: #1976D2;
+            color: white;
+        }
+
+        .accept-btn:hover {
+            background: #1565C0;
+            transform: translateY(-1px);
+        }
+
+        .necessary-btn {
+            background: #757575;
+            color: white;
+        }
+
+        .necessary-btn:hover {
+            background: #616161;
+            transform: translateY(-1px);
+        }
+
+        .reject-btn {
+            background: transparent;
+            color: #757575;
+            border: 1px solid #e0e0e0;
+        }
+
+        .reject-btn:hover {
+            background: #f5f5f5;
+            color: #424242;
+        }
+
+        .cookie-btn:focus {
+            outline: 2px solid #1976D2;
+            outline-offset: 2px;
+        }
+
+        /* Mobile Responsive Cookie Banner */
+        @media (max-width: 768px) {
+            .cookie-content {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 1rem;
+                text-align: center;
+            }
+
+            .cookie-buttons {
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+
+            .cookie-btn {
+                flex: 1;
+                min-width: 120px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .cookie-buttons {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .cookie-btn {
+                width: 100%;
+            }
+        }
     </style>
 </head>
 
 <body>
+    <!-- Cookie Consent Banner -->
+    <div id="cookie-banner" class="cookie-banner">
+        <div class="cookie-content">
+            <div class="cookie-text">
+                <h4>🍪 Cookie Usage Notice</h4>
+                <p>We use cookies to improve your browsing experience, analyze website traffic, and display personalized advertisements. By using our website, you consent to our use of cookies.</p>
+                <p style="margin-top: 0.5rem;">
+                    <a href="/privacy-en.html" target="_blank" style="color: #1976D2;">View Privacy Policy</a> |
+                    <a href="#" onclick="showCookieDetails()" style="color: #1976D2;">Learn More</a>
+                </p>
+            </div>
+            <div class="cookie-buttons">
+                <button id="accept-all-cookies" class="cookie-btn accept-btn">Accept All</button>
+                <button id="accept-necessary-cookies" class="cookie-btn necessary-btn">Necessary Only</button>
+                <button id="reject-all-cookies" class="cookie-btn reject-btn">Reject</button>
+            </div>
+        </div>
+        <div id="cookie-details" class="cookie-details" style="display: none;">
+            <h5>Cookie Type Information:</h5>
+            <ul>
+                <li><strong>Essential Cookies:</strong> Required for the website to function properly</li>
+                <li><strong>Analytical Cookies:</strong> Help us understand website usage (Google Analytics)</li>
+                <li><strong>Advertising Cookies:</strong> Used to display personalized ads (Google AdSense)</li>
+            </ul>
+        </div>
+    </div>
+
     <!-- Header -->
     <header class="header">
         <div class="container">
             <div class="header-content">
                 <a href="/" class="logo" aria-label="Water vs Fire Home">
-                    <svg width="20" height="20" viewBox="0 0 20 20" fill="#FF5722" style="display: inline-block; vertical-align: middle; margin-right: 2px;">
-                        <path d="M10 2C6 2 3 5 3 9c0 4 5 8 7 9 2-1 7-5 7-9 0-4-3-7-7-7z"/>
-                    </svg>
-                    <svg width="20" height="20" viewBox="0 0 20 20" fill="#2196F3" style="display: inline-block; vertical-align: middle; margin-right: 5px;">
-                        <path d="M10 2C6 2 3 5 3 9c0 3 4 7 7 8 3-1 7-5 7-8 0-4-3-7-7-7z"/>
-                    </svg>
-                    Water vs Fire
+                    🔥💧 Water vs Fire
                 </a>
                 <button class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
                     ☰
@@ -1411,18 +1790,18 @@
         <div class="container">
             <!-- Hero Section -->
             <section class="hero">
-                <h1>Welcome to Water vs Fire Game</h1>
-                <p style="max-width: 900px; margin: 0 auto; line-height: 1.3;">Water vs Fire is a fast-paced action game! Spray water to control fires, collect coins to upgrade abilities, and battle bigger blazes. Stay sharp and enjoy this thrilling addictive game!</p>
+                <h1>Play Water vs Fire Game Free</h1>
+                <p style="max-width: 900px; margin: 0 auto; line-height: 1.3;">Step into the role of an elite firefighter in this strategic action game. Use your water spray skills to contain spreading fires while collecting resources to enhance your abilities. Every decision counts as the flames grow more challenging!</p>
             </section>
 
             <!-- Game Section -->
             <section id="game" class="game-container" aria-label="Water vs Fire Game">
-                <h2 style="text-align: center; color: #1976D2; font-size: 2.5rem; margin-bottom: 0.75rem;">Play Water vs Fire Game Now</h2>
+                <h2 style="text-align: center; color: #1976D2; font-size: 2.5rem; margin-bottom: 0.75rem;">Start Your Firefighting Mission</h2>
                 <p style="text-align: center; color: #718096; font-size: 1rem; margin-bottom: 1rem;">
                     <svg width="16" height="16" viewBox="0 0 20 20" fill="#FF5722" style="display: inline-block; vertical-align: middle; margin-right: 3px;">
                         <path d="M10 2C6 2 3 5 3 9c0 4 5 8 7 9 2-1 7-5 7-9 0-4-3-7-7-7z"/>
                     </svg>
-                    Unblocked free fire fighting game - No download required! Play instantly in your browser!
+                    Challenge yourself with escalating fire scenarios - Accessible anytime, anywhere!
                     <svg width="16" height="16" viewBox="0 0 20 20" fill="#DC143C" style="display: inline-block; vertical-align: middle; margin-left: 3px;">
                         <rect x="4" y="6" width="12" height="8" rx="1"/>
                         <rect x="6" y="4" width="8" height="2" rx="1"/>
@@ -1438,10 +1817,10 @@
                     <span style="background: rgba(33, 150, 243, 0.2); color: #1976D2; padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.8rem; font-weight: 500;">3D</span>
                 </div>
 
-                <div class="game-image-container">
-                    <a href="https://www.crazygames.com/game/water-vs-fire" 
-                       target="_blank" 
-                       rel="noopener" 
+                  <div class="game-image-container">
+                    <a href="https://www.crazygames.com/game/water-vs-fire"
+                       target="_blank"
+                       rel="noopener"
                        class="game-link"
                        aria-label="Play Water vs Fire on CrazyGames">
                         <img src="WaterVsFire.png"
@@ -1458,25 +1837,99 @@
                 </div>
             </section>
 
-            <!-- Controls Section -->
-            <section class="controls-section" aria-label="Game Controls">
+            <!-- Game Guide Section -->
+            <section class="controls-section" aria-label="Game Guide">
                 <h3>How to Play</h3>
-                <div class="controls-content">
-                    <div class="control-item">
-                        <div class="control-key">WASD</div>
-                        <div class="control-desc">Move around</div>
+
+                <!-- Basic Controls -->
+                <div class="game-guide-section">
+                    <h4>Basic Controls</h4>
+                    <div class="controls-content">
+                        <div class="control-item">
+                            <div class="control-key">WASD</div>
+                            <div class="control-desc">Move character</div>
+                        </div>
+                        <div class="control-item">
+                            <div class="control-key">Arrow Keys</div>
+                            <div class="control-desc">Alternative movement</div>
+                        </div>
+                        <div class="control-item">
+                            <div class="control-key">Mouse Drag</div>
+                            <div class="control-desc">Direct character movement</div>
+                        </div>
+                        <div class="control-item">
+                            <div class="control-key">Stop near fire</div>
+                            <div class="control-desc">Auto-spray water</div>
+                        </div>
                     </div>
-                    <div class="control-item">
-                        <div class="control-key">Arrow Keys</div>
-                        <div class="control-desc">Alternative movement</div>
+                </div>
+
+                <!-- Fire Fighting Strategy -->
+                <div class="game-guide-section">
+                    <h4>Fire Fighting Strategy</h4>
+                    <div class="strategy-content">
+                        <div class="strategy-item">
+                            <div class="strategy-icon">🔥</div>
+                            <div class="strategy-text">
+                                <strong>Priority System:</strong> Tackle the largest fires first - they spread faster and are harder to control later
+                            </div>
+                        </div>
+                        <div class="strategy-item">
+                            <div class="strategy-icon">💧</div>
+                            <div class="strategy-text">
+                                <strong>Efficient Spraying:</strong> Position yourself strategically to cover multiple fires with minimal movement
+                            </div>
+                        </div>
+                        <div class="strategy-item">
+                            <div class="strategy-icon">🎯</div>
+                            <div class="strategy-text">
+                                <strong>Containment First:</strong> Focus on preventing fire spread rather than complete extinguishment
+                            </div>
+                        </div>
                     </div>
-                    <div class="control-item">
-                        <div class="control-key">Mouse Drag</div>
-                        <div class="control-desc">Move character</div>
+                </div>
+
+                <!-- Upgrade Strategy -->
+                <div class="game-guide-section">
+                    <h4>Upgrade Strategy</h4>
+                    <div class="strategy-content">
+                        <div class="strategy-item">
+                            <div class="strategy-icon">🪙</div>
+                            <div class="strategy-text">
+                                <strong>Coin Collection:</strong> Balance fire control with coin gathering - don't let fires grow while collecting
+                            </div>
+                        </div>
+                        <div class="strategy-item">
+                            <div class="strategy-icon">⚡</div>
+                            <div class="strategy-text">
+                                <strong>Water Power:</strong> Prioritize water pressure upgrades first - they make all levels easier
+                            </div>
+                        </div>
+                        <div class="strategy-item">
+                            <div class="strategy-icon">🏃</div>
+                            <div class="strategy-text">
+                                <strong>Speed vs Power:</strong> Invest in movement speed for large areas, water power for intense fires
+                            </div>
+                        </div>
                     </div>
-                    <div class="control-item">
-                        <div class="control-key">Stop near fire</div>
-                        <div class="control-desc">Automatically spray water</div>
+                </div>
+
+                <!-- Pro Tips -->
+                <div class="game-guide-section">
+                    <h4>Pro Tips</h4>
+                    <div class="tips-content">
+                        <div class="tip-item">
+                            <span class="tip-bullet">💡</span>
+                            <span>Use corners and walls to funnel fires into manageable areas</span>
+                        </div>
+                        <div class="tip-item">
+                            <span class="tip-bullet">⏱️</span>
+                            <span>Time your movements between fire spreads for maximum efficiency</span>
+                        </div>
+                        <div class="tip-item">
+                            <span class="tip-bullet">🔄</span>
+                            <span>Create patterns that allow you to control multiple fires systematically</span>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -1486,9 +1939,7 @@
                 <div class="game-details-grid">
                     <div class="game-detail-item">
                         <div class="detail-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="#1976D2">
-                                <path d="M12 2C13.1 2 14 2.9 14 4C14 5.1 13.1 6 12 6C10.9 6 10 5.1 10 4C10 2.9 10.9 2 12 2ZM21 9V7L15 13.5C15.3 14 15.5 14.5 15.7 15L19 11.7C19.4 11.3 20 11.3 20.4 11.7C20.8 12.1 20.8 12.7 20.4 13.1L17 16.5C16.8 16.7 16.5 16.8 16.2 16.8C15.9 16.8 15.6 16.7 15.4 16.5L14 15.1V22H12V15.1L10.6 16.5C10.4 16.7 10.1 16.8 9.8 16.8C9.5 16.8 9.2 16.7 9 16.5L5.6 13.1C5.2 12.7 5.2 12.1 5.6 11.7C6 11.3 6.6 11.3 7 11.7L10.3 15C10.5 14.5 10.7 14 11 13.5L5 7V9H3V5H7V7H5.8L11.8 13L13.8 11H19V9H21Z"/>
-                            </svg>
+                            👨‍💻
                         </div>
                         <div class="detail-content">
                             <h4>Developer</h4>
@@ -1497,35 +1948,38 @@
                     </div>
                     <div class="game-detail-item">
                         <div class="detail-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="#FFC107">
-                                <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
-                            </svg>
+                            ⭐
                         </div>
                         <div class="detail-content">
                             <h4>Rating</h4>
-                            <p>9.1/10 (1,274 votes)</p>
+                            <p>9.1/10 (1,512 votes)</p>
                         </div>
                     </div>
                     <div class="game-detail-item">
                         <div class="detail-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="#1976D2">
-                                <path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"/>
-                            </svg>
+                            🔄
+                        </div>
+                        <div class="detail-content">
+                            <h4>Last Updated</h4>
+                            <p>September 2025</p>
+                        </div>
+                    </div>
+                    <div class="game-detail-item">
+                        <div class="detail-icon">
+                            📅
                         </div>
                         <div class="detail-content">
                             <h4>Released</h4>
                             <p>September 2025</p>
                         </div>
                     </div>
-                    <div class="game-detail-item">
+                    <div class="game-detail-item platforms-item">
                         <div class="detail-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="#1976D2">
-                                <path d="M21 6H3c-1.1 0-2 .9-2 2v8c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-10 7H8v3H6v-3H3v-2h3V8h2v3h3v2zm4.5 2c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm4-3c-.83 0-1.5-.67-1.5-1.5S18.67 9 19.5 9s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/>
-                            </svg>
+                            🎮
                         </div>
                         <div class="detail-content">
-                            <h4>Technology</h4>
-                            <p>HTML5 (Unity WebGL)</p>
+                            <h4>Platforms</h4>
+                            <p>Browser (desktop, mobile, tablet), App Store (iOS, Android)</p>
                         </div>
                     </div>
                 </div>
@@ -1549,7 +2003,7 @@
                             <p>Key features include: realistic water physics, progressive difficulty, upgradeable firefighter equipment, coin collection system, and engaging fire rescue scenarios. Whether you're looking for a casual browser game or an intense action experience, Water vs Fire delivers thrilling gameplay that tests your reflexes and decision-making skills.</p>
                         </div>
                         <div class="overview-image">
-                            <img src="game-icon.webp" alt="Water vs Fire Game Icon - Free Fire Fighting Action Game" loading="lazy">
+                            <img src="wvf.png" alt="Water vs Fire Game Icon - Free Fire Fighting Action Game" loading="lazy">
                         </div>
                     </div>
 
@@ -1558,18 +2012,108 @@
                         <div class="developer-card">
                             <h3>Developer</h3>
                             <div class="developer-details">
-                                <img src="game-icon.webp" alt="Rike Games Developer Logo - Creator of Water vs Fire Game" class="developer-logo" loading="lazy">
+                                <img src="rike games.png" alt="Rike Games Developer Logo - Creator of Water vs Fire Game" class="developer-logo" loading="lazy">
                                 <div class="developer-text">
-                                    <h4>Rike Games</h4>
+                                    <h4><a href="https://rikegames.com/" target="_blank" rel="noopener" style="color: #1976D2; text-decoration: none; transition: color 0.3s ease;" onmouseover="this.style.color='#2196F3'" onmouseout="this.style.color='#1976D2'">Rike Games</a></h4>
                                     <p>A passionate game development studio dedicated to creating engaging and entertaining mobile experiences. Known for producing high-quality casual games with intuitive controls and addictive gameplay.</p>
+                                    <p style="margin-top: 0.5rem;">
+                                        <a href="https://rikegames.com/" target="_blank" rel="noopener" style="color: #666; text-decoration: none; font-size: 0.9rem;">
+                                            🔗 Visit Official Website
+                                        </a>
+                                    </p>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Combined Screenshots and Related Games Row -->
+                    <!-- User Information Section -->
+                    <section class="user-info-section" aria-label="User Information">
+                        <h3>Important Information for Players</h3>
+
+                        <!-- Game Ads Information -->
+                        <div class="info-block">
+                            <h4>📢 About Game Ads</h4>
+                            <div class="info-content">
+                                <div class="info-item">
+                                    <div class="info-icon">✅</div>
+                                    <div class="info-text">
+                                        <strong>Why Ads Exist:</strong> This game is completely free to play. Ads help support the developers and keep the game free for everyone.
+                                    </div>
+                                </div>
+                                <div class="info-item">
+                                    <div class="info-icon">🎮</div>
+                                    <div class="info-text">
+                                        <strong>Ad Experience:</strong> Ads appear between levels and are designed to be minimally intrusive to your gaming experience.
+                                    </div>
+                                </div>
+                                <div class="info-item">
+                                    <div class="info-icon">🔒</div>
+                                    <div class="info-text">
+                                        <strong>Ad-Free Option:</strong> Check the game settings for potential ad-free options or premium versions.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Performance Tips -->
+                        <div class="info-block">
+                            <h4>⚡ Performance Optimization</h4>
+                            <div class="info-content">
+                                <div class="info-item">
+                                    <div class="info-icon">🌐</div>
+                                    <div class="info-text">
+                                        <strong>Browser Recommendation:</strong> Chrome, Firefox, or Edge provide the best performance. Avoid older browser versions.
+                                    </div>
+                                </div>
+                                <div class="info-item">
+                                    <div class="info-icon">📶</div>
+                                    <div class="info-text">
+                                        <strong>Internet Connection:</strong> A stable connection ensures smooth gameplay. If experiencing lag, try refreshing the page.
+                                    </div>
+                                </div>
+                                <div class="info-item">
+                                    <div class="info-icon">🔧</div>
+                                    <div class="info-text">
+                                        <strong>Troubleshooting:</strong> Clear browser cache, close unnecessary tabs, and restart your browser if you experience performance issues.
+                                    </div>
+                                </div>
+                                <div class="info-item">
+                                    <div class="info-icon">📱</div>
+                                    <div class="info-text">
+                                        <strong>Mobile Performance:</strong> For the best mobile experience, ensure you have sufficient storage space and a recent device model.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Common Questions -->
+                        <div class="info-block">
+                            <h4>❓ Frequently Asked Questions</h4>
+                            <div class="faq-content">
+                                <div class="faq-item">
+                                    <div class="faq-question">Q: Is Water vs Fire really free to play?</div>
+                                    <div class="faq-answer">A: Yes! The game is completely free with no hidden costs or mandatory purchases.</div>
+                                </div>
+                                <div class="faq-item">
+                                    <div class="faq-question">Q: Can I play this game offline?</div>
+                                    <div class="faq-answer">A: An internet connection is required as the game streams from our servers.</div>
+                                </div>
+                                <div class="faq-item">
+                                    <div class="faq-question">Q: Are there any age restrictions?</div>
+                                    <div class="faq-answer">A: The game is rated for ages 3+ and contains family-friendly content.</div>
+                                </div>
+                                <div class="faq-item">
+                                    <div class="faq-question">Q: How often is the game updated?</div>
+                                    <div class="faq-answer">A: The game receives regular updates with new levels, features, and performance improvements.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Game Screenshots Gallery -->
                     <div class="combined-games-section">
-                        <h3>Game Media Gallery</h3>
+                        <h3>Game Screenshots</h3>
+                        <p style="text-align: center; color: #666; margin-bottom: 1.5rem; max-width: 600px; margin-left: auto; margin-right: auto;">See Water vs Fire in action - Experience the thrill of controlling fires with strategic water management</p>
                         <div class="combined-games-grid">
                             <div class="combined-games-scroll">
                                 <!-- Screenshots first -->
@@ -1581,25 +2125,6 @@
                                 </div>
                                 <div class="screenshot-item">
                                     <img src="screenshot3.webp" alt="Water vs Fire Game Advanced Level Screenshot - Challenging fire spread scenarios" loading="lazy">
-                                </div>
-                                <!-- Related Games next -->
-                                <div class="related-game-item">
-                                    <img src="related-game5.webp" alt="Similar Fire Fighting Game - Emergency Response Game Alternative" loading="lazy">
-                                </div>
-                                <div class="related-game-item">
-                                    <img src="related-game6.webp" alt="Action Arcade Game Similar to Water vs Fire - Casual Gaming Alternative" loading="lazy">
-                                </div>
-                                <div class="related-game-item">
-                                    <img src="related-game7.webp" alt="Water Spraying Game Like Water vs Fire - Fire Control Game Alternative" loading="lazy">
-                                </div>
-                                <div class="related-game-item">
-                                    <img src="related-game8.webp" alt="Coin Collection Game Similar to Water vs Fire - Upgrade System Game" loading="lazy">
-                                </div>
-                                <div class="related-game-item">
-                                    <img src="related-game9.webp" alt="Fire Rescue Game Like Water vs Fire - Emergency Simulator Game" loading="lazy">
-                                </div>
-                                <div class="related-game-item">
-                                    <img src="related-game10.webp" alt="Mobile Fire Fighting Game - Browser-Based Action Game Alternative" loading="lazy">
                                 </div>
                                 <!-- Duplicate for seamless looping -->
                                 <div class="screenshot-item">
@@ -1635,7 +2160,7 @@
 
                     <!-- Rike Games Other Products -->
                     <div id="rike-games-section" class="rike-games-section">
-                        <h3>More Games from Rike Games</h3>
+                        <h3>More Games from <a href="https://rikegames.com/" target="_blank" rel="noopener" style="color: #1976D2; text-decoration: none; transition: color 0.3s ease;" onmouseover="this.style.color='#2196F3'" onmouseout="this.style.color='#1976D2'">Rike Games</a></h3>
                         <div class="rike-games-grid">
                             <a href="https://www.crazygames.com/game/data-diggers" target="_blank" rel="noopener" class="rike-game-item">
                                 <img src="Data Diggers.webp" alt="Data Diggers Game by Rike Games" loading="lazy">
@@ -1674,7 +2199,7 @@
                             <div class="stat-item">
                                 <div class="stat-number">9.1</div>
                                 <div class="stat-label">User Rating</div>
-                                <div class="stat-sub">1,274 votes</div>
+                                <div class="stat-sub">1,512 votes</div>
                             </div>
                             <div class="stat-item">
                                 <div class="stat-number">1M+</div>
@@ -1797,17 +2322,18 @@
     <!-- Enhanced Footer with SEO Keywords -->
     <footer class="footer" id="about">
         <div class="container">
-            <p>&copy; 2024 Water vs Fire Game. The best free online fire fighting action game. Play unblocked Water vs Fire with no download required.</p>
+            <p>&copy; 2024 Water vs Fire Game. Experience the ultimate firefighting challenge - where strategy meets quick reflexes in an addictive arcade adventure.</p>
             <div class="footer-links">
-                <a href="/privacy" rel="nofollow">Privacy Policy</a>
+                <a href="/privacy-en.html" rel="nofollow">Privacy Policy</a>
                 <a href="/terms" rel="nofollow">Terms of Service</a>
                 <a href="/contact" rel="nofollow">Contact Us</a>
-                <a href="https://www.crazygames.com/game/water-vs-fire" target="_blank" rel="noopener">Play on CrazyGames</a>
+                <a href="javascript:void(0)" onclick="showCookieSettings()" rel="nofollow">Cookie Settings</a>
+                <a href="https://www.crazygames.com/game/water-vs-fire" target="_blank" rel="noopener">Game Source</a>
             </div>
-            <!-- SEO Keywords Section -->
+            <!-- Additional Information -->
             <div style="margin-top: 20px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.2);">
                 <p style="font-size: 0.9em; opacity: 0.8; text-align: center;">
-                    Popular searches: free water vs fire game, play water vs fire online, unblocked fire fighting game, firefighter simulator, water spray game, extinguish fire game, action arcade game, casual browser game, no download game, mobile game, coin collection game, upgrade abilities game, fire rescue game, emergency response game
+                    Join thousands of players enjoying Water vs Fire - an addictive arcade game where strategy meets quick reflexes. Perfect for casual gaming sessions and improving your hand-eye coordination skills.
                 </p>
             </div>
         </div>
@@ -1969,6 +2495,85 @@
                     });
             });
         }
+    </script>
+
+    <!-- Cookie Consent Management -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const cookieBanner = document.getElementById('cookie-banner');
+            const acceptAllBtn = document.getElementById('accept-all-cookies');
+            const acceptNecessaryBtn = document.getElementById('accept-necessary-cookies');
+            const rejectAllBtn = document.getElementById('reject-all-cookies');
+
+            // Check if user has already made a choice
+            const cookieChoice = localStorage.getItem('cookieChoice');
+
+            if (!cookieChoice) {
+                // Show banner if no choice has been made
+                setTimeout(() => {
+                    cookieBanner.classList.add('show');
+                }, 1000);
+            } else {
+                // Apply existing choice
+                applyCookieChoice(cookieChoice);
+            }
+
+            // Handle Accept All button
+            acceptAllBtn.addEventListener('click', function() {
+                setCookieChoice('all');
+                cookieBanner.classList.remove('show');
+            });
+
+            // Handle Accept Necessary button
+            acceptNecessaryBtn.addEventListener('click', function() {
+                setCookieChoice('necessary');
+                cookieBanner.classList.remove('show');
+            });
+
+            // Handle Reject All button
+            rejectAllBtn.addEventListener('click', function() {
+                setCookieChoice('none');
+                cookieBanner.classList.remove('show');
+            });
+
+            function setCookieChoice(choice) {
+                localStorage.setItem('cookieChoice', choice);
+                localStorage.setItem('cookieChoiceTimestamp', Date.now().toString());
+                applyCookieChoice(choice);
+            }
+
+            function applyCookieChoice(choice) {
+                // For demonstration - in real implementation, you would enable/disable
+                // Google Analytics and AdSense based on user choice
+                if (choice === 'all') {
+                    console.log('All cookies accepted - enabling analytics and advertising');
+                    // In real implementation: enable Google Analytics and AdSense
+                    gtag('consent', 'update', {
+                        'analytics_storage': 'granted',
+                        'ad_storage': 'granted'
+                    });
+                } else if (choice === 'necessary') {
+                    console.log('Only necessary cookies accepted - disabling analytics and advertising');
+                    // In real implementation: disable Google Analytics and AdSense
+                    gtag('consent', 'update', {
+                        'analytics_storage': 'denied',
+                        'ad_storage': 'denied'
+                    });
+                } else if (choice === 'none') {
+                    console.log('All cookies rejected - disabling all non-essential cookies');
+                    // In real implementation: disable all non-essential cookies
+                    gtag('consent', 'update', {
+                        'analytics_storage': 'denied',
+                        'ad_storage': 'denied'
+                    });
+                }
+            }
+
+            // Provide a way for users to change their cookie preferences
+            window.showCookieSettings = function() {
+                cookieBanner.classList.add('show');
+            };
+        });
     </script>
 </body>
 </html>
