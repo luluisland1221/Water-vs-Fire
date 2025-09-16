@@ -7884,7 +7884,7 @@
       },
       "dockerUnsupportedDomains": [],
       "firebase": {
-        "apiKey": "AIzaSyAkBGn9sKEUBSMQ9CTFyHHxXas0tdcpts8",
+        "apiKey": process.env.NEXT_PUBLIC_FIREBASE_API_KEY || "",
         "authDomain": "auth.crazygames.com",
         "projectId": "crazygames-user-portal-prod",
         "storageBucket": "crazygames-user-portal-prod.appspot.com",
@@ -7900,8 +7900,8 @@
       "useRateLimiting": true,
       "experiments": [],
       "suprsend": {
-        "publicKey": "SS.PUBK.EhTwWnm7G0ervPWfI7Ua9cE16VHHLM75Tsl7JeRk9v8",
-        "vapidKey": "BEJFVXvJMFW9Z4vuim-cNOJqerrEgssGYWymD2pd17oIxI26atJNGR6lI-Mpqp5P2Cw8E7G5s4H9Vio5fGEoHmU"
+        "publicKey": process.env.NEXT_PUBLIC_SUPRSEND_PUBLIC_KEY || "",
+        "vapidKey": process.env.NEXT_PUBLIC_VAPID_KEY || ""
       },
       "defaultCountry": "US"
     }
