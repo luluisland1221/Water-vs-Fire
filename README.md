@@ -8,7 +8,7 @@
 
 Welcome to Water vs Fire - the most exciting online gaming experience where strategy meets fun! Battle against elements and challenge your friends in this thrilling adventure.
 
-![Water vs Fire Game](watervsfire.png)
+![Water vs Fire Game](wvf.jpg)
 
 ---
 
