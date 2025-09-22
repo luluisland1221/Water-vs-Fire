@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fireboy and Watergirl 1: Fire and Water - Play Free Online</title>
+    <meta name="description" content="Play Fireboy and Watergirl 1: Fire and Water online free! The classic adventure game where you control two characters to solve puzzles and overcome obstacles.">
+    <meta name="keywords" content="fireboy and watergirl, fire and water, two player game, adventure game, puzzle game, online game">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Fireboy and Watergirl 1: Fire and Water - Play Free Online">
+    <meta property="og:description" content="Play the classic Fireboy and Watergirl 1 game online free! Control Fireboy and Watergirl through temples filled with puzzles and obstacles.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://watervsfire.com/fireboy-and-watergirl-1.html">
+
+    <!-- Styles -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #2196F3 0%, #1976D2 50%, #FF5722 100%);
+            min-height: 100vh;
+            color: #333;
+        }
+
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1rem 0;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #1976D2;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .nav {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .nav a {
+            color: #4a5568;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .nav a:hover {
+            color: #1976D2;
+            background: rgba(33, 150, 243, 0.1);
+        }
+
+        .nav a.active {
+            background: #1976D2;
+            color: white;
+        }
+
+        .main-content {
+            padding: 2rem 0;
+        }
+
+        .game-header {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: white;
+        }
+
+        .game-header h1 {
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 700;
+            color: white;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            letter-spacing: -0.02em;
+            line-height: 1.1;
+        }
+
+        .game-header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .game-navigation {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .game-nav-btn {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            padding: 0.75rem 1.5rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .game-nav-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+            border-color: rgba(255, 255, 255, 0.5);
+            transform: translateY(-2px);
+        }
+
+        .game-nav-btn.active {
+            background: #1976D2;
+            border-color: #1976D2;
+        }
+
+        .game-container {
+            background: white;
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            margin: 0 auto;
+            max-width: 900px;
+            text-align: center;
+        }
+
+        .game-frame {
+            border: none;
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+            max-width: 100%;
+            height: 600px;
+            margin: 0 auto;
+            display: block;
+        }
+
+        .game-info {
+            margin-top: 2rem;
+            text-align: left;
+        }
+
+        .game-info h3 {
+            color: #1976D2;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .info-item {
+            background: rgba(33, 150, 243, 0.1);
+            padding: 1rem;
+            border-radius: 12px;
+            border-left: 4px solid #1976D2;
+        }
+
+        .info-item h4 {
+            color: #1976D2;
+            margin-bottom: 0.5rem;
+        }
+
+        .controls {
+            background: rgba(255, 87, 34, 0.1);
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin-top: 1.5rem;
+        }
+
+        .controls h4 {
+            color: #FF5722;
+            margin-bottom: 1rem;
+        }
+
+        .controls-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        .control-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 0.5rem;
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: 8px;
+        }
+
+        .key {
+            background: #333;
+            color: white;
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            font-family: monospace;
+            font-weight: bold;
+            min-width: 60px;
+            text-align: center;
+        }
+
+        .footer {
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .nav {
+                justify-content: center;
+            }
+
+            .game-header h1 {
+                font-size: 2rem;
+            }
+
+            .game-navigation {
+                gap: 0.5rem;
+            }
+
+            .game-nav-btn {
+                padding: 0.5rem 1rem;
+                font-size: 0.9rem;
+            }
+
+            .game-container {
+                margin: 0 1rem;
+                padding: 1rem;
+            }
+
+            .game-frame {
+                height: 400px;
+            }
+
+            .controls-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    🔥💧 Water vs Fire Games
+                </a>
+                <nav class="nav">
+                    <a href="index.html">Home</a>
+                    <a href="fireboy-and-watergirl-1.html" class="active">Game 1</a>
+                    <a href="fireboy-and-watergirl-2.html">Game 2</a>
+                    <a href="fireboy-and-watergirl-3.html">Game 3</a>
+                    <a href="fireboy-and-watergirl-4.html">Game 4</a>
+                    <a href="fireboy-and-watergirl-5.html">Game 5</a>
+                    <a href="fireboy-and-watergirl-6.html">Game 6</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Game Header -->
+            <div class="game-header">
+                <h1>Fireboy and Watergirl 1: Fire and Water</h1>
+                <p>The classic adventure begins! Help Fireboy and Watergirl navigate through the mysterious Forest Temple</p>
+            </div>
+
+            <!-- Game Navigation -->
+            <div class="game-navigation">
+                <a href="fireboy-and-watergirl-1.html" class="game-nav-btn active">Game 1</a>
+                <a href="fireboy-and-watergirl-2.html" class="game-nav-btn">Game 2</a>
+                <a href="fireboy-and-watergirl-3.html" class="game-nav-btn">Game 3</a>
+                <a href="fireboy-and-watergirl-4.html" class="game-nav-btn">Game 4</a>
+                <a href="fireboy-and-watergirl-5.html" class="game-nav-btn">Game 5</a>
+                <a href="fireboy-and-watergirl-6.html" class="game-nav-btn">Game 6</a>
+            </div>
+
+            <!-- Game Container -->
+            <div class="game-container">
+                <iframe
+                    src="https://www.twoplayergames.org/gameframe/fire-and-water"
+                    width="800"
+                    height="600"
+                    frameborder="0"
+                    allowfullscreen
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    class="game-frame"
+                    title="Fireboy and Watergirl 1: Fire and Water Game">
+                </iframe>
+
+                <!-- Game Info -->
+                <div class="game-info">
+                    <h3>About Fireboy and Watergirl 1</h3>
+                    <p>Embark on an exciting adventure with Fireboy and Watergirl in their first quest! Navigate through the Forest Temple, solving puzzles and overcoming obstacles using the unique abilities of both characters.</p>
+
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <h4>🔥 Fireboy Abilities</h4>
+                            <p>Walk through lava pools, collect red diamonds, and avoid water at all costs!</p>
+                        </div>
+                        <div class="info-item">
+                            <h4>💧 Watergirl Powers</h4>
+                            <p>Swim through water, collect blue diamonds, and stay away from lava pools.</p>
+                        </div>
+                        <div class="info-item">
+                            <h4>🤝 Teamwork Required</h4>
+                            <p>Use both characters together to activate buttons, move platforms, and reach the exit doors.</p>
+                        </div>
+                    </div>
+
+                    <div class="controls">
+                        <h4>Game Controls</h4>
+                        <div class="controls-grid">
+                            <div class="control-item">
+                                <span class="key">W,A,S,D</span>
+                                <span>Move Watergirl</span>
+                            </div>
+                            <div class="control-item">
+                                <span class="key">↑,←,↓,→</span>
+                                <span>Move Fireboy</span>
+                            </div>
+                            <div class="control-item">
+                                <span class="key">Mouse</span>
+                                <span>Activate levers and buttons</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Fireboy and Watergirl Games. Play all Fireboy and Watergirl adventures online free!</p>
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

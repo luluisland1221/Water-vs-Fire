@@ -262,6 +262,243 @@
             transform: scale(0.95);
         }
 
+        /* Dropdown Menu Styles */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-toggle {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #4a5568;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+        }
+
+        .dropdown-toggle:hover {
+            color: #1976D2;
+            background: rgba(33, 150, 243, 0.1);
+        }
+
+        .dropdown-arrow {
+            font-size: 0.8rem;
+            transition: transform 0.3s ease;
+        }
+
+        .dropdown:hover .dropdown-arrow {
+            transform: rotate(180deg);
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            min-width: 220px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+            z-index: 1000;
+            margin-top: 0.5rem;
+        }
+
+        .dropdown:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .dropdown-menu a {
+            display: block;
+            padding: 0.75rem 1rem;
+            color: #4a5568;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border-radius: 8px;
+            margin: 0.25rem;
+        }
+
+        .dropdown-menu a:hover {
+            color: #1976D2;
+            background: rgba(33, 150, 243, 0.1);
+            transform: translateX(5px);
+        }
+
+        .dropdown-menu a:first-child {
+            margin-top: 0.5rem;
+        }
+
+        .dropdown-menu a:last-child {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .dropdown-menu {
+                position: static;
+                opacity: 1;
+                visibility: visible;
+                transform: none;
+                box-shadow: none;
+                background: rgba(255, 255, 255, 0.1);
+                margin-top: 0;
+            }
+
+            .dropdown-toggle .dropdown-arrow {
+                display: none;
+            }
+        }
+
+        /* Smooth Scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Enhanced Rike Games Hover Effects */
+        .rike-games-section .rike-game-item {
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .rike-games-section .rike-game-item::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(33, 150, 243, 0.1), rgba(33, 150, 243, 0.2));
+            border-radius: 12px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+        }
+
+        .rike-games-section .rike-game-item:hover::after {
+            opacity: 1;
+        }
+
+        .rike-games-section .rike-game-item:hover {
+            transform: translateY(-3px) scale(1.02);
+        }
+
+        .rike-games-section .rike-game-item:hover .game-title {
+            color: #1976D2;
+            font-weight: 600;
+        }
+
+        /* Section Animation */
+        .about-game {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.6s ease forwards;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Stagger Animation for Game Cards */
+        .rike-games-grid .rike-game-item {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.6s ease forwards;
+        }
+
+        .rike-games-grid .rike-game-item:nth-child(1) { animation-delay: 0.1s; }
+        .rike-games-grid .rike-game-item:nth-child(2) { animation-delay: 0.2s; }
+        .rike-games-grid .rike-game-item:nth-child(3) { animation-delay: 0.3s; }
+        .rike-games-grid .rike-game-item:nth-child(4) { animation-delay: 0.4s; }
+        .rike-games-grid .rike-game-item:nth-child(5) { animation-delay: 0.5s; }
+        .rike-games-grid .rike-game-item:nth-child(6) { animation-delay: 0.6s; }
+
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: linear-gradient(135deg, #1976D2, #42A5F5);
+            color: white;
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            font-size: 1.2rem;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 1000;
+            box-shadow: 0 4px 15px rgba(33, 150, 243, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background: linear-gradient(135deg, #1565C0, #1976D2);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(33, 150, 243, 0.4);
+        }
+
+        /* Enhanced Section Headers */
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .section-header h1,
+        .section-header h2 {
+            color: #1e40af;
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 700;
+            margin-bottom: 1rem;
+            text-shadow: none;
+            position: relative;
+            display: inline-block;
+            letter-spacing: -0.02em;
+            line-height: 1.1;
+        }
+
+        .section-header h1::after,
+        .section-header h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(90deg, #1976D2, #42A5F5);
+            border-radius: 2px;
+        }
+
+        .section-header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 1.5rem auto 0;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
         /* Main Content */
         .main-content {
             padding: 2rem 0;
@@ -275,10 +512,12 @@
 
         .hero h1 {
             font-size: clamp(2rem, 5vw, 3.5rem);
-            font-weight: bold;
-            color: white;
+            font-weight: 700;
+            color: #2563eb;
             margin-bottom: 1rem;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            text-shadow: none;
+            letter-spacing: -0.02em;
+            line-height: 1.1;
         }
 
         .hero p {
@@ -732,7 +971,95 @@
 
         /* Rike Games Other Products Section */
         .rike-games-section {
-            margin-bottom: 4rem;
+            margin-bottom: 2rem;
+        }
+
+        /* Fireboy Games Section - Human Expenditure Program Style */
+        .fireboy-games-section {
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+        }
+
+        .fireboy-section-title {
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
+            font-weight: 700;
+            color: #1e40af;
+            margin-bottom: 1.5rem;
+            text-align: center;
+            letter-spacing: -0.02em;
+        }
+
+        .fireboy-games-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+            gap: 1.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .fireboy-game-item {
+            display: block;
+            text-decoration: none;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border: 1px solid #e5e7eb;
+        }
+
+        .fireboy-game-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            border-color: #3b82f6;
+        }
+
+        .fireboy-game-item img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+            display: block;
+            background: #f3f4f6;
+        }
+
+        .fireboy-game-item .game-name {
+            display: block;
+            padding: 12px 16px;
+            font-size: 14px;
+            font-weight: 600;
+            color: #1f2937;
+            text-align: center;
+            line-height: 1.4;
+            border-top: 1px solid #e5e7eb;
+            background: #fafafa;
+            transition: background-color 0.3s ease;
+        }
+
+        .fireboy-game-item:hover .game-name {
+            background: #f0f9ff;
+            color: #1e40af;
+        }
+
+        .rike-games-section h1 {
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 700;
+            color: #1e40af;
+            margin-bottom: 1rem;
+            text-shadow: none;
+            letter-spacing: -0.02em;
+            line-height: 1.1;
+            text-align: center;
+        }
+
+        .rike-games-section h1 a {
+            color: #1976D2;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            font-weight: 700;
+        }
+
+        .rike-games-section h1 a:hover {
+            color: #2196F3;
         }
 
         .rike-games-section h3 {
@@ -742,7 +1069,149 @@
             font-size: 1.8rem;
         }
 
+        /* Fireboy Games Grid (Large Images) */
         .rike-games-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            padding: 2rem 0;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .rike-games-grid .rike-game-item {
+            background: white;
+            border-radius: 16px;
+            padding: 1.5rem;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .rike-games-grid .rike-game-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #1976D2, #42A5F5);
+            transform: translateX(-100%);
+            transition: transform 0.3s ease;
+        }
+
+        .rike-games-grid .rike-game-item:hover::before {
+            transform: translateX(0);
+        }
+
+        .rike-games-grid .rike-game-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .rike-games-grid .rike-game-item img {
+            width: 160px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 12px;
+            display: block;
+            transition: transform 0.3s ease;
+            margin-bottom: 1rem;
+            background: #f8f9fa;
+        }
+
+        .rike-games-grid .rike-game-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .rike-games-grid .game-title {
+            font-size: 1.1rem;
+            color: #333;
+            text-align: center;
+            transition: color 0.3s ease;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            line-height: 1.4;
+        }
+
+        .rike-games-grid .rike-game-item:hover .game-title {
+            color: #1976D2;
+        }
+
+        /* Game Rating and Tags */
+        .game-rating {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .game-rating .stars {
+            color: #FFD700;
+            font-size: 0.9rem;
+        }
+
+        .game-rating .rating-text {
+            color: #666;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        .game-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+
+        .game-tag {
+            background: rgba(33, 150, 243, 0.1);
+            color: #1976D2;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        .play-button {
+            background: linear-gradient(135deg, #1976D2, #42A5F5);
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 25px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: auto;
+        }
+
+        .play-button:hover {
+            background: linear-gradient(135deg, #1565C0, #1976D2);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(33, 150, 243, 0.3);
+        }
+
+        .play-button::before {
+            content: "▶";
+            font-size: 0.8rem;
+        }
+
+        /* Rike Games Grid (Original Small Images) */
+        .rike-games-section .rike-games-grid {
             display: flex;
             justify-content: center;
             gap: 1.2rem;
@@ -750,7 +1219,7 @@
             flex-wrap: nowrap;
         }
 
-        .rike-game-item {
+        .rike-games-section .rike-game-item {
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -759,11 +1228,11 @@
             transition: transform 0.3s ease;
         }
 
-        .rike-game-item:hover {
+        .rike-games-section .rike-game-item:hover {
             transform: translateY(-2px);
         }
 
-        .rike-game-item img {
+        .rike-games-section .rike-game-item img {
             width: 100px;
             height: 100px;
             object-fit: cover;
@@ -774,11 +1243,11 @@
             margin-bottom: 0.75rem;
         }
 
-        .rike-game-item:hover img {
+        .rike-games-section .rike-game-item:hover img {
             transform: scale(1.05);
         }
 
-        .game-title {
+        .rike-games-section .game-title {
             font-size: 0.9rem;
             color: #666;
             text-align: center;
@@ -1738,6 +2207,210 @@
                 width: 100%;
             }
         }
+
+        /* Enhanced Mobile Responsive Design */
+        @media (max-width: 768px) {
+            /* Enhanced Header Navigation */
+            .header-content {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            .logo {
+                font-size: 1.5rem;
+            }
+
+            .nav {
+                justify-content: center;
+                gap: 0.5rem;
+            }
+
+            .nav a {
+                padding: 0.4rem 0.8rem;
+                font-size: 0.9rem;
+            }
+
+            /* Dropdown Menu Mobile Optimization */
+            .dropdown-menu {
+                position: static;
+                display: none;
+                box-shadow: none;
+                background: rgba(255, 255, 255, 0.95);
+                width: 100%;
+                margin-top: 0.5rem;
+            }
+
+            .dropdown.active .dropdown-menu {
+                display: block;
+            }
+
+            .dropdown-toggle::after {
+                content: ' ▼';
+                font-size: 0.8rem;
+            }
+
+            /* Enhanced Game Cards */
+            .game-card {
+                transform: none !important;
+                margin-bottom: 1rem;
+            }
+
+            .game-card:hover {
+                transform: none !important;
+            }
+
+            .game-image-container {
+                height: 180px;
+            }
+
+            .game-card h3 {
+                font-size: 1.1rem;
+            }
+
+            .game-card p {
+                font-size: 0.9rem;
+            }
+
+            .play-btn {
+                padding: 0.6rem 1.2rem;
+                font-size: 0.9rem;
+            }
+
+            /* Enhanced Section Headers */
+            .section-header h1,
+            .section-header h2 {
+                font-size: 1.8rem;
+            }
+
+            .section-header .subtitle {
+                font-size: 1rem;
+            }
+
+            /* Enhanced Fireboy Games Mobile */
+            .fireboy-section-title {
+                font-size: 1.6rem;
+                margin-bottom: 1.2rem;
+            }
+
+            .fireboy-games-grid {
+                grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+                gap: 1rem;
+            }
+
+            .fireboy-game-item img {
+                height: 120px;
+            }
+
+            .fireboy-game-item .game-name {
+                padding: 10px 12px;
+                font-size: 13px;
+            }
+
+            /* Enhanced Feature Grid */
+            .feature-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            /* Enhanced Stats Grid */
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
+            }
+
+            /* Back to Top Button */
+            .back-to-top {
+                bottom: 15px;
+                right: 15px;
+                width: 45px;
+                height: 45px;
+                font-size: 1.2rem;
+            }
+
+            /* Enhanced Mobile Touch Targets */
+            .game-card,
+            .nav a,
+            .play-btn,
+            .dropdown-toggle {
+                min-height: 44px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            /* Ultra-Compact Mobile Design */
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .game-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .game-image-container {
+                height: 160px;
+            }
+
+            .section-header h1,
+            .section-header h2 {
+                font-size: 1.5rem;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .container {
+                padding: 0 0.75rem;
+            }
+
+            /* Enhanced Small Device Touch Targets */
+            .nav a {
+                padding: 0.5rem 0.75rem;
+                font-size: 0.85rem;
+            }
+
+            .play-btn {
+                padding: 0.5rem 1rem;
+                font-size: 0.85rem;
+            }
+        }
+
+        /* Tablet Optimization */
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .game-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .feature-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        /* Large Screen Enhancement */
+        @media (min-width: 1400px) {
+            .container {
+                max-width: 1320px;
+            }
+
+            .game-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+
+            .feature-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
     </style>
 </head>
 
@@ -1782,6 +2455,28 @@
                 <nav class="nav" role="navigation" aria-label="Main navigation">
                     <a href="#game" aria-label="Play Game">Play now</a>
                     <a href="#about-water-vs-fire" aria-label="About Water vs Fire">About</a>
+                    <div class="dropdown">
+                        <a href="#" class="dropdown-toggle" aria-label="Game Categories">
+                            🎮 Games <span class="dropdown-arrow">▼</span>
+                        </a>
+                        <div class="dropdown-menu">
+                            <a href="#fireboy-games" aria-label="Fireboy and Watergirl Games">
+                                🔥 Fireboy & Watergirl Series
+                            </a>
+                            <a href="#puzzle-games" aria-label="Puzzle Games">
+                                🧠 Puzzle Games
+                            </a>
+                            <a href="#action-games" aria-label="Action Games">
+                                🎯 Action Games
+                            </a>
+                            <a href="#mobile-games" aria-label="Mobile Games">
+                                📱 Mobile Games
+                            </a>
+                            <a href="#popular-games" aria-label="Popular Games">
+                                🏆 Popular Games
+                            </a>
+                        </div>
+                    </div>
                     <a href="#rike-games-section" aria-label="More Games from Rike Games">More games</a>
                     <a href="privacy.html" aria-label="Privacy Policy">Privacy</a>
                     <a href="terms.html" aria-label="Terms of Service">Terms</a>
@@ -1841,6 +2536,128 @@
                         </div>
                     </a>
                 </div>
+            </section>
+
+            <!-- Fireboy and Watergirl Games Section -->
+            <section id="fireboy-games" class="fireboy-games-section">
+                <div class="container">
+                    <h1 class="fireboy-section-title">All Fireboy and Watergirl Games</h1>
+                    <div class="fireboy-games-grid">
+                        <a href="fireboy-and-watergirl-1.html" class="fireboy-game-item">
+                            <img src="fireboy-and-watergirl-1.jpg" alt="Fireboy and Watergirl in The Forest Temple" loading="lazy">
+                            <div class="game-name">Forest Temple</div>
+                        </a>
+                        <a href="fireboy-and-watergirl-2.html" class="fireboy-game-item">
+                            <img src="fireboy-and-watergirl-2.jpg" alt="Fireboy and Watergirl 2 in The Light Temple" loading="lazy">
+                            <div class="game-name">Light Temple</div>
+                        </a>
+                        <a href="fireboy-and-watergirl-3.html" class="fireboy-game-item">
+                            <img src="fireboy-and-watergirl-3.jpg" alt="Fireboy and Watergirl 3 in The Ice Temple" loading="lazy">
+                            <div class="game-name">Ice Temple</div>
+                        </a>
+                        <a href="fireboy-and-watergirl-4.html" class="fireboy-game-item">
+                            <img src="fireboy-and-watergirl-4.jpg" alt="Fireboy and Watergirl 4 The Crystal Temple" loading="lazy">
+                            <div class="game-name">Crystal Temple</div>
+                        </a>
+                        <a href="fireboy-and-watergirl-5.html" class="fireboy-game-item">
+                            <img src="fireboy-and-watergirl-5.jpg" alt="Fireboy and Watergirl 5: Elements" loading="lazy">
+                            <div class="game-name">Elements</div>
+                        </a>
+                        <a href="fireboy-and-watergirl-6.html" class="fireboy-game-item">
+                            <img src="fire-and-water.jpg" alt="Fireboy and Watergirl 6: Fairy Tales" loading="lazy">
+                            <div class="game-name">Fairy Tales</div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Rike Games Other Products -->
+                    <div id="rike-games-section" class="rike-games-section">
+                        <div class="section-header">
+                            <h1>More Games from <a href="https://rikegames.com/" target="_blank" rel="noopener">Rike Games</a></h1>
+                        </div>
+                        <div class="rike-games-grid">
+                            <a href="https://www.crazygames.com/game/data-diggers" target="_blank" rel="noopener" class="rike-game-item">
+                                <img src="Data-Diggers.webp" alt="Data Diggers Game by Rike Games" loading="lazy">
+                                <div class="game-title">Data Diggers</div>
+                            </a>
+                            <a href="https://www.crazygames.com/game/no-pain-no-gain---ragdoll-sandbox" target="_blank" rel="noopener" class="rike-game-item">
+                                <img src="No-pain-no-gain.webp" alt="No pain no gain! Game by Rike Games" loading="lazy">
+                                <div class="game-title">No pain no gain!</div>
+                            </a>
+                            <a href="https://www.crazygames.com/game/world-z-defense---zombie-defense" target="_blank" rel="noopener" class="rike-game-item">
+                                <img src="World-Z-Defense.webp" alt="World Z Defense Game by Rike Games" loading="lazy">
+                                <div class="game-title">World Z Defense</div>
+                            </a>
+                            <a href="https://www.crazygames.com/game/archers-battle" target="_blank" rel="noopener" class="rike-game-item">
+                                <img src="archersbattle.png" alt="Archers Battle Game by Rike Games" loading="lazy">
+                                <div class="game-title">Archers Battle</div>
+                            </a>
+                            <a href="https://www.crazygames.com/game/beach-club" target="_blank" rel="noopener" class="rike-game-item">
+                                <img src="beachclub.png" alt="Beach Club Game by Rike Games" loading="lazy">
+                                <div class="game-title">Beach Club</div>
+                            </a>
+                            <a href="https://www.crazygames.com/game/pottery-master" target="_blank" rel="noopener" class="rike-game-item">
+                                <img src="potterymaster.png" alt="Pottery Master Game by Rike Games" loading="lazy">
+                                <div class="game-title">Pottery Master</div>
+                            </a>
+                            <a href="https://www.crazygames.com/game/stickman-and-guns" target="_blank" rel="noopener" class="rike-game-item">
+                                <img src="stickmanandguns.png" alt="Stickman and Guns Game by Rike Games" loading="lazy">
+                                <div class="game-title">Stickman and Guns</div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Game Stats -->
+                    <div class="game-stats">
+                        <div class="stats-grid">
+                            <div class="stat-item">
+                                <div class="stat-number">9.1</div>
+                                <div class="stat-label">User Rating</div>
+                                <div class="stat-sub">1,512 votes</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">1M+</div>
+                                <div class="stat-label">Downloads</div>
+                                <div class="stat-sub">Android & iOS</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">4.5★</div>
+                                <div class="stat-label">Store Rating</div>
+                                <div class="stat-sub">Google Play</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">2025</div>
+                                <div class="stat-label">Released</div>
+                                <div class="stat-sub">Latest Version</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Technical Specifications -->
+                    <div class="tech-specs">
+                        <h3>Technical Information</h3>
+                        <div class="specs-grid">
+                            <div class="spec-item">
+                                <h4>Platform</h4>
+                                <p>Web Browser, iOS, Android, PC, Tablet</p>
+                            </div>
+                            <div class="spec-item">
+                                <h4>Technology</h4>
+                                <p>HTML5, Unity WebGL</p>
+                            </div>
+                            <div class="spec-item">
+                                <h4>Game Size</h4>
+                                <p>Lightweight - Instant Play</p>
+                            </div>
+                            <div class="spec-item">
+                                <h4>Internet</h4>
+                                <p>Required for online play</p>
+                            </div>
+                        </div>
+                    </div>
+
+                  </div>
             </section>
 
             <!-- Game Guide Section -->
@@ -2164,91 +2981,64 @@
                         </div>
                     </div>
 
-                    <!-- Rike Games Other Products -->
-                    <div id="rike-games-section" class="rike-games-section">
-                        <h3>More Games from <a href="https://rikegames.com/" target="_blank" rel="noopener" style="color: #1976D2; text-decoration: none; transition: color 0.3s ease;" onmouseover="this.style.color='#2196F3'" onmouseout="this.style.color='#1976D2'">Rike Games</a></h3>
-                        <div class="rike-games-grid">
-                            <a href="https://www.crazygames.com/game/data-diggers" target="_blank" rel="noopener" class="rike-game-item">
-                                <img src="Data-Diggers.webp" alt="Data Diggers Game by Rike Games" loading="lazy">
-                                <div class="game-title">Data Diggers</div>
-                            </a>
-                            <a href="https://www.crazygames.com/game/no-pain-no-gain---ragdoll-sandbox" target="_blank" rel="noopener" class="rike-game-item">
-                                <img src="No-pain-no-gain.webp" alt="No pain no gain! Game by Rike Games" loading="lazy">
-                                <div class="game-title">No pain no gain!</div>
-                            </a>
-                            <a href="https://www.crazygames.com/game/world-z-defense---zombie-defense" target="_blank" rel="noopener" class="rike-game-item">
-                                <img src="World-Z-Defense.webp" alt="World Z Defense Game by Rike Games" loading="lazy">
-                                <div class="game-title">World Z Defense</div>
-                            </a>
-                            <a href="https://www.crazygames.com/game/archers-battle" target="_blank" rel="noopener" class="rike-game-item">
-                                <img src="archersbattle.png" alt="Archers Battle Game by Rike Games" loading="lazy">
-                                <div class="game-title">Archers Battle</div>
-                            </a>
-                            <a href="https://www.crazygames.com/game/beach-club" target="_blank" rel="noopener" class="rike-game-item">
-                                <img src="beachclub.png" alt="Beach Club Game by Rike Games" loading="lazy">
-                                <div class="game-title">Beach Club</div>
-                            </a>
-                            <a href="https://www.crazygames.com/game/pottery-master" target="_blank" rel="noopener" class="rike-game-item">
-                                <img src="potterymaster.png" alt="Pottery Master Game by Rike Games" loading="lazy">
-                                <div class="game-title">Pottery Master</div>
-                            </a>
-                            <a href="https://www.crazygames.com/game/stickman-and-guns" target="_blank" rel="noopener" class="rike-game-item">
-                                <img src="stickmanandguns.png" alt="Stickman and Guns Game by Rike Games" loading="lazy">
-                                <div class="game-title">Stickman and Guns</div>
-                            </a>
+            <!-- Puzzle Games Section -->
+            <section id="puzzle-games" class="about-game" aria-label="Puzzle Games">
+                <div class="container">
+                    <div class="section-header">
+                        <h1>🧠 Puzzle Games</h1>
+                        <p>Challenge your mind with our collection of brain-teasing puzzle games</p>
+                    </div>
+                    <div class="game-overview">
+                        <div class="overview-content">
+                            <p>Coming Soon! We're working on bringing you the best puzzle games that will test your logic, strategy, and problem-solving skills.</p>
                         </div>
                     </div>
+                </div>
+            </section>
 
-                    <!-- Game Stats -->
-                    <div class="game-stats">
-                        <div class="stats-grid">
-                            <div class="stat-item">
-                                <div class="stat-number">9.1</div>
-                                <div class="stat-label">User Rating</div>
-                                <div class="stat-sub">1,512 votes</div>
-                            </div>
-                            <div class="stat-item">
-                                <div class="stat-number">1M+</div>
-                                <div class="stat-label">Downloads</div>
-                                <div class="stat-sub">Android & iOS</div>
-                            </div>
-                            <div class="stat-item">
-                                <div class="stat-number">4.5★</div>
-                                <div class="stat-label">Store Rating</div>
-                                <div class="stat-sub">Google Play</div>
-                            </div>
-                            <div class="stat-item">
-                                <div class="stat-number">2025</div>
-                                <div class="stat-label">Released</div>
-                                <div class="stat-sub">Latest Version</div>
-                            </div>
+            <!-- Action Games Section -->
+            <section id="action-games" class="about-game" aria-label="Action Games">
+                <div class="container">
+                    <div class="section-header">
+                        <h1>🎯 Action Games</h1>
+                        <p>Fast-paced action games that will get your adrenaline pumping</p>
+                    </div>
+                    <div class="game-overview">
+                        <div class="overview-content">
+                            <p>Coming Soon! Get ready for exciting action-packed adventures and intense gameplay challenges.</p>
                         </div>
                     </div>
+                </div>
+            </section>
 
-                    <!-- Technical Specifications -->
-                    <div class="tech-specs">
-                        <h3>Technical Information</h3>
-                        <div class="specs-grid">
-                            <div class="spec-item">
-                                <h4>Platform</h4>
-                                <p>Web Browser, iOS, Android, PC, Tablet</p>
-                            </div>
-                            <div class="spec-item">
-                                <h4>Technology</h4>
-                                <p>HTML5, Unity WebGL</p>
-                            </div>
-                            <div class="spec-item">
-                                <h4>Game Size</h4>
-                                <p>Lightweight - Instant Play</p>
-                            </div>
-                            <div class="spec-item">
-                                <h4>Internet</h4>
-                                <p>Required for online play</p>
-                            </div>
+            <!-- Mobile Games Section -->
+            <section id="mobile-games" class="about-game" aria-label="Mobile Games">
+                <div class="container">
+                    <div class="section-header">
+                        <h1>📱 Mobile Games</h1>
+                        <p>Perfect games for playing on your mobile devices</p>
+                    </div>
+                    <div class="game-overview">
+                        <div class="overview-content">
+                            <p>Coming Soon! Mobile-optimized games that you can play anywhere, anytime on your smartphone or tablet.</p>
                         </div>
                     </div>
+                </div>
+            </section>
 
-                  </div>
+            <!-- Popular Games Section -->
+            <section id="popular-games" class="about-game" aria-label="Popular Games">
+                <div class="container">
+                    <div class="section-header">
+                        <h1>🏆 Popular Games</h1>
+                        <p>Most played games by our community</p>
+                    </div>
+                    <div class="game-overview">
+                        <div class="overview-content">
+                            <p>Check out the fan-favorite games that our players love the most!</p>
+                        </div>
+                    </div>
+                </div>
             </section>
 
             <!-- FAQ Section for SEO -->
@@ -2323,6 +3113,11 @@
                 </div>
             </section>
         </div>
+
+        <!-- Back to Top Button -->
+        <button id="backToTop" class="back-to-top" aria-label="Back to top" title="Back to top">
+            <span class="back-to-top-icon">↑</span>
+        </button>
     </main>
 
     <!-- Enhanced Footer with SEO Keywords -->
@@ -2579,6 +3374,63 @@
             window.showCookieSettings = function() {
                 cookieBanner.classList.add('show');
             };
+        });
+    </script>
+
+    <!-- Back to Top Button Functionality -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const backToTopButton = document.getElementById('backToTop');
+
+            // Show/hide button based on scroll position
+            window.addEventListener('scroll', function() {
+                if (window.pageYOffset > 300) {
+                    backToTopButton.classList.add('show');
+                } else {
+                    backToTopButton.classList.remove('show');
+                }
+            });
+
+            // Smooth scroll to top when clicked
+            backToTopButton.addEventListener('click', function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+    <!-- Mobile Dropdown Menu Functionality -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+
+            dropdownToggles.forEach(function(toggle) {
+                toggle.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const dropdown = this.parentElement;
+
+                    // Close other dropdowns
+                    document.querySelectorAll('.dropdown').forEach(function(otherDropdown) {
+                        if (otherDropdown !== dropdown) {
+                            otherDropdown.classList.remove('active');
+                        }
+                    });
+
+                    // Toggle current dropdown
+                    dropdown.classList.toggle('active');
+                });
+            });
+
+            // Close dropdowns when clicking outside
+            document.addEventListener('click', function(e) {
+                if (!e.target.closest('.dropdown')) {
+                    document.querySelectorAll('.dropdown').forEach(function(dropdown) {
+                        dropdown.classList.remove('active');
+                    });
+                }
+            });
         });
     </script>
 </body>
